@@ -1,6 +1,6 @@
 # Making the model's text speakable, and saying values exactly: saved excerpts (fetched 2026-11-15)
 
-Short quotes only, copied from the pages on 2026-11-15. Used for PREREGISTRATION addendum A13 (docs/DECISIONS.md D-V30).
+Short quotes only, copied from the pages on 2026-11-15. Used for PREREGISTRATION addendum A13.
 
 ## ElevenLabs Agents, prompting guide, https://elevenlabs.io/docs/eleven-agents/best-practices/prompting-guide
 

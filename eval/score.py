@@ -1,7 +1,7 @@
 """Score traces from eval/run.py against the answers fixed in eval/cases.json.
 
   python -X utf8 eval/score.py eval/results/run1 [eval/results/run2 ...]  -> <dir>/scores.json + summary.md
-  python -X utf8 eval/score.py --check   -> self-check of the scorer on hand-made traces (no model calls)
+  python -X utf8 eval/score.py --check   -> self-check of the scorer on constructed traces (no model calls)
 """
 import json
 import re
@@ -290,7 +290,7 @@ def main(dirs, cases_path=None):
 
 
 def self_check():
-    """Hand-made traces with known answers; must all come out as stated."""
+    """Constructed traces with known answers; must all come out as stated."""
     cases = load_cases()
     seed = {k: {**v, "title": "x"} for k, v in SEED.items()}
     ok = []

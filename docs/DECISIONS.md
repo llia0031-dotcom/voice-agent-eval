@@ -29,7 +29,7 @@ Every model call is the agent's own reply in a live tool loop: the stream is tim
 
 ## D-V20 An acoustic backchannel detector, tried offline
 
-- Looked at (excerpts in `research/sources/backchannel_models_excerpts.md`): MaAI `bc_det` (Kyoto University; code MIT, model CC BY-NC-ND 4.0; Chinese, English and Japanese; listens to both channels; runs on a CPU), Easy Turn (3.45 GB, GPU-timed), X2-Turn (10.5 GB), TurnSense (text only), bargein-classifier (English only), Krisp VIVA (needs a key), LiveKit adaptive interruption (cloud only).
+- Looked at (excerpts in `research/sources/backchannel_models_excerpts.md`): MaAI `bc_det` (Kyoto University; code MIT; Chinese model CC BY-NC-ND 4.0, the English model lists no licence; Chinese, English and Japanese; listens to both channels; runs on a CPU), Easy Turn (3.45 GB, GPU-timed), X2-Turn (10.5 GB), TurnSense (text only), bargein-classifier (English only), Krisp VIVA (needs a key), LiveKit adaptive interruption (cloud only).
 - Chosen: MaAI `bc_det`, in a separate Python environment.
 - Rule fixed before any output was seen: feed the saved two-channel recordings frame by frame; a held stretch is a backchannel if the probability reaches 0.45 within 0.8 s of its onset (MaAI's event threshold on its Japanese data). A scored round would follow only if it got more of the 24 backchannel and interruption stretches right than the word-and-duration rule (22).
 - Result: 17 and 18 of 24, so no scored round (report section 6.11). The clips are synthetic, so this says nothing about the model on real speech.
@@ -37,7 +37,7 @@ Every model call is the agent's own reply in a live tool loop: the stream is tim
 ## D-V23 Listening only to the main speaker
 
 - Problem: Silero marks 99.6% of four-talker babble frames as speech. Noise suppression (RNNoise, DeepFilterNet) removes non-speech noise, so it cannot help.
-- Looked at (excerpts in `research/sources/speaker_vad_excerpts.md`): FireRedChat pVAD (Apache-2.0; Chinese and English; 3.9 MB plus an 89 MB SpeechBrain ECAPA speaker model), personal-vad (no Chinese listed), a speaker-verification gate (rules to write by hand).
+- Looked at (excerpts in `research/sources/speaker_vad_excerpts.md`): FireRedChat pVAD (Apache-2.0; Chinese and English; 3.9 MB plus an 89 MB SpeechBrain ECAPA speaker model), personal-vad (no Chinese listed), a speaker-verification gate (rules to write from scratch).
 - Chosen: FireRedChat pVAD. As in its LiveKit plugin, the speaker embedding of the first utterance is computed and set after that utterance (`eval/pvad_enroll.py`).
 - Offline rule fixed before any output was seen: after enrolment, at most 10% of babble frames counted as speech; at least 90% of the user's later speech frames found on clean items; no more false onsets than Silero on clean items. All three held: 0.1% of babble frames, 92.8% of later user frames, and 0 false onsets on clean items for both (on babble, 0 against Silero's 18). So it was run (report section 6.14).
 

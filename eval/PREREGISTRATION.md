@@ -76,7 +76,7 @@ python -I -X utf8 eval/run.py --arm <vad|smart|vad-think|oracle> --tag run2
 python -I -X utf8 eval/score.py eval/results/run1 eval/results/run2
 ```
 
-Expected cost about 0.3 USD in total (smoke items used about 4,600 input tokens per item; Haiku 5.5 is 0.10 / 0.50 USD per million input / output tokens). Stop and ask if it passes 2 USD.
+Expected cost about 0.3 USD in total (smoke items used about 4,600 input tokens per item; Haiku 5.5 is 0.10 / 0.50 USD per million input / output tokens). The budget for model calls is 2 USD.
 
 ## Harness changes made on the smoke items (before freezing)
 
@@ -116,7 +116,8 @@ Expected cost about 0.3 USD in total (smoke items used about 4,600 input tokens 
 4. **Edits for publication (2026-11-16; the first two before addendum A14, the third after it).** None changes what runs or how it is scored.
    - The run section above named the path of the key file, which lies in another local folder. It now says only that `VOICE_EVAL_ENV_FILE` names a `.env` file holding the key.
    - Four files had the local folder for models, Python environments and audio written into them: `agent/config.py`, `eval/mic_rebuild.py`, `eval/pvad_enroll.py` and `eval/bcdet_offline_check.py`. They now read it from `PORTFOLIO_LOCAL` (default: a folder named `portfolio-local` in the home directory). On this machine the paths resolve to the same folders as before, and the offline tests pass. Only these four files changed, so the hashes given for them in earlier addenda no longer match; no other hash changed.
-   - After A14 ran, the usage note at the top of `eval/run.py` pointed to an internal file for where the key file lives. It now points to the Reproduce section of `README.md`. Only that comment changed; the hash of `eval/run.py` is now `5156ccfd9bc3` (A14: `4a81df459412`).
+   - After A14 ran, the usage note at the top of `eval/run.py` pointed to a file outside this repository for where the key file lives. It now points to the Reproduce section of `README.md`. Only that comment changed; the hash of `eval/run.py` is now `5156ccfd9bc3` (A14: `4a81df459412`).
+5. **Wording edits for publication (2026-11-17).** Nothing that runs or is scored changed. The run logs above now say what happened to a run without saying why it stopped, the budget line and one comment of change 4 were reworded, and the self-check of `eval/score.py` now calls its traces "constructed" (two comments; new hash `8c05927151c1`, A14: `ea31e3afadff`).
 
 ## Addendum A1: barge-in by words (written 2026-11-13, before any run of this arm)
 
@@ -195,7 +196,7 @@ Checked before the run, on one second of digital silence only (no test audio): a
 
 **Files (sha256, first 12 characters) at the start of this arm.** `agent/pipeline.py` `a887a0f5cc67` (adds the duration count; with no minimum set, A1 and A2 behave as before and their tests still pass), `agent/config.py` `4be2b9573093`, `agent/audio.py` `14b9a69e1f2e`, `agent/bargein.py` `7b8870bceeba`, `eval/run.py` `f91503defcdd`, `eval/score.py` `ea31e3afadff`, `tests/test_offline.py` `a0cac5f12f99` (18 tests pass).
 
-**A3 status: NOT RUN.** Started 22:18 MYT on 2026-11-13; every one of the 84 item-runs failed at its first model call with HTTP 400 "credit balance is too low" (the API account is shared with other projects and its prepaid credit ran out). No model call succeeded, nothing was spent, and no result exists for this arm. The failed records are kept in `results/aborted/run1-no-credit/` and `results/aborted/run2-no-credit/` and are not scored. The arm, the rule and the five expectations above stay as written; the run can start again once the account has credit.
+**A3 status: NOT RUN.** Started 22:18 MYT on 2026-11-13; every one of the 84 item-runs failed at its first model call with HTTP 400 "credit balance is too low". No model call succeeded, nothing was spent, and no result exists for this arm. The failed records are kept in `results/aborted/run1-no-credit/` and `results/aborted/run2-no-credit/` and are not scored. The arm, the rule and the five expectations above stay as written; the run can start again once the API accepts the calls.
 
 **Offline estimate while blocked (not the scored run).** `eval/dur_offline_check.py` runs Silero VAD alone over each backchannel and interruption clip (no model calls): `results/dur_offline_check.md`. The 0.41 s 嗯 clip gets 0.51–0.54 s of voiced time, because the voice-activity state stays on for a few frames after the sound ends; so the 0.5 s minimum would probably not spare it, and expectation 1 would probably not hold. Every interruption reaches 0.5 s of voiced time 0.53–0.68 s after it starts, which is where expectation 2 puts the median stop latency.
 
@@ -457,7 +458,7 @@ All three pass rules were met, and the zero-embedding result means pVAD is used 
 - Unchanged since A8: `agent/audio.py` `653b1e17b2e1`, `agent/llm.py` `66bf20d531e4`, `eval/run.py` `d860272cad4d`, `eval/score.py` `ea31e3afadff` and `eval/pvad_enroll.json` `154cd5fe6c60`.
 - `tests/test_offline.py` `2d13b358b34b`: 27 tests pass. The new one checks that this arm sends the brief wording and that `vad-think-combo` keeps the original.
 
-**A9 run log (2026-11-14).** The addendum was saved at 20:41:16 MYT (file time, printed when the run was started); run1 ran 20:41–20:46 MYT. Run2 started at 20:46 and stopped after 10 items (T01 to T10, last one at 20:47) because the session that ran it restarted; nothing in the files changed (same hashes). It was resumed at 22:57 with the same files: run.py skips the items already in the record, and the remaining 32 items ran 22:57–23:04. The interrupted run had not written its token usage, so the usage of the first 10 items (50,332 input and 2,015 output tokens, 24 calls) was added back from the per-call counts in their traces; the same sum over run1's traces matches run1's usage file exactly. The confirmation items ran 23:04–23:06. 0 harness errors, 0 rate-limit retries. Results: `EVALUATION.md` section 6.16 and `results/followups_vs_combo.md`.
+**A9 run log (2026-11-14).** The addendum was saved at 20:41:16 MYT (file time, printed when the run was started); run1 ran 20:41–20:46 MYT. Run2 started at 20:46 and stopped after 10 items (T01 to T10, last one at 20:47); nothing in the files changed (same hashes). It was resumed at 22:57 with the same files: run.py skips the items already in the record, and the remaining 32 items ran 22:57–23:04. The interrupted run had not written its token usage, so the usage of the first 10 items (50,332 input and 2,015 output tokens, 24 calls) was added back from the per-call counts in their traces; the same sum over run1's traces matches run1's usage file exactly. The confirmation items ran 23:04–23:06. 0 harness errors, 0 rate-limit retries. Results: `EVALUATION.md` section 6.16 and `results/followups_vs_combo.md`.
 
 ## Addendum A10: keep a turn whole when the user spoke first (written 2026-11-14, before any run of this arm)
 
@@ -534,7 +535,7 @@ If the recorded chunk ends do not match the chunks of the final text, that step 
 - Unchanged: `agent/audio.py` `653b1e17b2e1`, `eval/run.py` `d860272cad4d`, `eval/score.py` `ea31e3afadff`, `eval/pvad_enroll.json` `154cd5fe6c60`.
 - `tests/test_offline.py` `1dc4f6cbfd23`: 30 tests pass. The two new ones check two things: chunk ends found while streaming equal the chunks spoken from the final text, and a later chunk starts as soon as its text has arrived instead of waiting for the whole reply.
 
-**A11 run log (2026-11-14).** The addendum was saved at 23:33:08 MYT (file time); the first item started at 23:33:30. Runs: run1 23:33–23:40 and run2 23:40–23:46 MYT, 0 harness errors, 0 rate-limit retries. The files listed above had not changed (same hashes). A first attempt to save the addendum and start the runs in one command was refused by a safety check before anything ran (it contained a file removal); the addendum was then saved and the runs started without it. Results: `EVALUATION.md` section 6.18 and `results/followups_vs_combo.md`.
+**A11 run log (2026-11-14).** The addendum was saved at 23:33:08 MYT (file time); the first item started at 23:33:30. Runs: run1 23:33–23:40 and run2 23:40–23:46 MYT, 0 harness errors, 0 rate-limit retries. The files listed above had not changed (same hashes). Results: `EVALUATION.md` section 6.18 and `results/followups_vs_combo.md`.
 
 ## Addendum A12: disfluent requests and new voices (written 2026-11-15, before any run of these items)
 
@@ -580,7 +581,7 @@ All model calls use the standard interface, because they are the agent's live re
 
 **Files (sha256, first 12 characters).** `eval/disfluent_cases.json` `5bfe48e22097`, `eval/disfluent_cases.audio.json` `87c334cacfab`, `eval/pvad_enroll.json` `3bfdcb260170` (14 items added; the 46 earlier embeddings and the 0.268 s timing unchanged). Code unchanged since A11: `agent/pipeline.py` `226b02718437`, `agent/config.py` `fcd34e80432d`, `agent/audio.py` `653b1e17b2e1`, `agent/llm.py` `c7a2717d086d`, `eval/run.py` `d860272cad4d`, `eval/score.py` `ea31e3afadff`; `tests/test_offline.py` `1dc4f6cbfd23` (30 tests pass).
 
-**A12 run log (2026-11-15).** The addendum was saved at 00:04:52 MYT (file time); the first item started at 00:05:39. The first run of `vad-think` stopped after 10 items (D01 to D10, last at 00:06) when the session that ran it restarted; nothing in the files changed (same hashes). It was resumed at 00:47 with the same files (run.py skips the items already in the record), and the token usage of the 10 completed items (44,455 input and 2,575 output tokens, 21 calls) was added back from the per-call counts in their traces, as in A9. The other runs: `vad-think-combo` and the text-only control dis1 00:47–00:51; dis2 00:52–00:59 MYT. 0 harness errors, 0 rate-limit retries. Results: `EVALUATION.md` section 6.19 and `results/disfluent_vs_base.md`.
+**A12 run log (2026-11-15).** The addendum was saved at 00:04:52 MYT (file time); the first item started at 00:05:39. The first run of `vad-think` stopped after 10 items (D01 to D10, last at 00:06); nothing in the files changed (same hashes). It was resumed at 00:47 with the same files (run.py skips the items already in the record), and the token usage of the 10 completed items (44,455 input and 2,575 output tokens, 21 calls) was added back from the per-call counts in their traces, as in A9. The other runs: `vad-think-combo` and the text-only control dis1 00:47–00:51; dis2 00:52–00:59 MYT. 0 harness errors, 0 rate-limit retries. Results: `EVALUATION.md` section 6.19 and `results/disfluent_vs_base.md`.
 
 ## Addendum A13: say meeting durations in minutes (written 2026-11-15, before any run of this arm)
 

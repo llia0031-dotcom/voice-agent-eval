@@ -9,7 +9,7 @@ How does a cascaded voice agent (voice activity detection → speech recognition
 From [`eval/EVALUATION.md`](eval/EVALUATION.md), two runs of every arm:
 
 - **Listening, not the model, is what breaks the experience.** With perfect transcripts and turn-taking the same model, prompt and tools pass 41 of 42 items in both runs. With audio, about 30 pass.
-- **Background talk ran the conversation.** Silero VAD marked 99.6% of four-talker babble frames as speech, so every babble turn waited for the 20 s cap and was later cut off mid-reply. A voice-activity model that follows the first speaker (FireRedChat pVAD) ended every babble turn when the user stopped, with a first-audio median of 4.56 s instead of 20.4 s (section 6.14).
+- **Background talk ran the conversation.** Silero VAD marked 99.6% of four-talker babble frames as speech, so every babble turn waited for the 20 s cap, and 23 of 24 were later cut off mid-reply. A voice-activity model that follows the first speaker (FireRedChat pVAD) ended every babble turn when the user stopped, with a first-audio median of 4.56 s instead of 20.4 s (section 6.14).
 - **A fast stop and a kept reply are both possible.** Pausing at once and deciding afterwards kept the 0.26 s stop on interruptions and resumed the reply after 6 of 8 backchannels (section 6.10). Waiting for words before stopping talked through more backchannels, but made every real stop later (sections 6.7 to 6.9).
 - **"Wait, don't cancel" only works if the agent asks first.** In every arm the meeting was cancelled before the user could object. A spoken confirmation fixed it in both runs; a brief question cut the cost from 11 s to 8.5 s per cancel (sections 6.13 and 6.16).
 - **The fixes work together.** With all four changes, no babble turn was held or cut, every interruption stopped within 0.36 s, every reply survived its backchannel and "wait" stopped the cancellation (section 6.15). Four later follow-ups added on top kept their gains, except streamed synthesis: the silences left come from synthesis time, not from waiting for text (section 6.22).
@@ -47,7 +47,7 @@ Commands for each section are in section 11 of the report. Models, Python enviro
 | MeloTTS zh_en | the agent's voice | sherpa-onnx releases, tts-models | MIT |
 | Whisper small | read-back check of the items only | sherpa-onnx releases, asr-models | MIT |
 | FireRedChat pVAD, with the SpeechBrain ECAPA speaker model shipped beside it | the arms that listen to one speaker | huggingface.co/FireRedTeam/FireRedChat-pvad (Hugging Face cache in `voice-models/hf`) | Apache-2.0 |
-| MaAI `bc_det`, Chinese and English, with the Mimi encoder | the offline check of section 6.11 only | downloaded by the `maai` package | model CC BY-NC-ND 4.0, Mimi CC BY 4.0; only results are reported here |
+| MaAI `bc_det`, Chinese and English, with the Mimi encoder | the offline check of section 6.11 only | downloaded by the `maai` package | Chinese model CC BY-NC-ND 4.0 (the English model lists no licence), Mimi CC BY 4.0; only results are reported here |
 
 ## Layout
 

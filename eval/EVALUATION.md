@@ -1,6 +1,6 @@
 # Evaluating a cascaded Chinese voice agent: pauses, interruptions, backchannels and tool calls
 
-Draft, round 1 (13 November 2026). The plan, the items and the scoring rules were fixed before the run in [`PREREGISTRATION.md`](PREREGISTRATION.md); every number below comes from `results/run1`, `results/run2` and `results/asr_check.json`, through `score.py` and `tables.py` (generated tables: `results/summary.md`). Sections 6.7 to 6.10 and 6.12 to 6.19 are follow-up runs, each with its own plan written before it ran (addenda A1 to A12 of the preregistration; tables: `results/words_vs_base.md`, `results/lang_vs_base.md`, `results/dur_vs_base.md`, `results/pause_vs_base.md`, `results/short_vs_base.md`, `results/confirm_vs_base.md`, `results/pvad_vs_base.md`, `results/combo_vs_base.md`, `results/followups_vs_combo.md`). Section 6.11, the check before 6.14 and section 6.20 are offline, with no model calls (`results/bcdet_offline_check.md`, `results/pvad_offline_check.md`, `results/confirm_consistency.md`).
+Report, 13 to 17 November 2026. The plan, the items and the scoring rules were fixed before the run in [`PREREGISTRATION.md`](PREREGISTRATION.md); every number below comes from `results/run1`, `results/run2` and `results/asr_check.json`, through `score.py` and `tables.py` (generated tables: `results/summary.md`). Sections 6.7 to 6.10, 6.12 to 6.19, 6.21 and 6.22 are follow-up runs, each with its own plan written before it ran (addenda A1 to A14 of the preregistration; tables: `results/words_vs_base.md`, `results/lang_vs_base.md`, `results/dur_vs_base.md`, `results/pause_vs_base.md`, `results/short_vs_base.md`, `results/confirm_vs_base.md`, `results/pvad_vs_base.md`, `results/combo_vs_base.md`, `results/followups_vs_combo.md`, `results/minutes_vs_combo.md`). Section 6.11, the check before 6.14 and section 6.20 are offline, with no model calls (`results/bcdet_offline_check.md`, `results/pvad_offline_check.md`, `results/confirm_consistency.md`).
 
 ## Summary
 
@@ -80,7 +80,7 @@ A task passes when the mock server's final data is exactly right (a duplicate me
 | `vad-think` | as `vad` | adaptive |
 | `oracle` | no audio: the scripted text goes turn by turn to the same model and tools | off |
 
-All arms: `claude-haiku-5-5`, effort low, the same system prompt (Chinese, with a contact list and the rule "reply in the user's language") and tools. Barge-in in every audio arm: 0.2 s of continuous speech while the agent talks (Pipecat's `start_secs`). Three more arms were added after the main run to test rules on barge-in: `vad-think-words` (section 6.7), `vad-think-words-lang` (section 6.8), `vad-think-words-dur` (section 6.9) and `vad-think-pause` (section 6.10); two more test a shorter first speech chunk, `vad-think-short` (section 6.12), a spoken confirmation before a cancellation, `vad-think-confirm` (section 6.13), and a voice-activity model that follows one speaker, `vad-think-pvad` (section 6.14). `vad-think-combo` combines the four changes that helped (section 6.15), and later arms change it one thing at a time (section 6.16 on). `oracle` separates hearing errors from reasoning errors. Each arm ran twice over all 42 items.
+All arms: `claude-haiku-5-5`, effort low, the same system prompt (Chinese, with a contact list and the rule "reply in the user's language") and tools. Barge-in in every audio arm: 0.2 s of continuous speech while the agent talks (Pipecat's `start_secs`). Four more arms were added after the main run to test rules on barge-in: `vad-think-words` (section 6.7), `vad-think-words-lang` (section 6.8), `vad-think-words-dur` (section 6.9) and `vad-think-pause` (section 6.10); three more test a shorter first speech chunk, `vad-think-short` (section 6.12), a spoken confirmation before a cancellation, `vad-think-confirm` (section 6.13), and a voice-activity model that follows one speaker, `vad-think-pvad` (section 6.14). `vad-think-combo` combines the four changes that helped (section 6.15), and later arms change it one thing at a time (section 6.16 on). `oracle` separates hearing errors from reasoning errors. Each arm ran twice over all 42 items.
 
 ## 5. What was measured
 
@@ -123,7 +123,7 @@ Clean task items, first user turn, run1 + run2 (n = 32 per arm), seconds:
 
 (Parts are medians of each part, so they do not add up exactly.)
 
-- The model (network included) and the first chunk of speech take most of the time; tools take milliseconds. The first chunk was long, a median of 24 characters, because "好的，" alone is under the 4-character minimum, so the chunk ran to the next comma. A shorter first chunk is the cheapest latency fix this run points to; section 6.12 tests it.
+- The model (network included) and the first chunk of speech take most of the time; tools take milliseconds. The first chunk was long, a median of 24 characters in the `vad` arm, because "好的，" alone is under the 4-character minimum, so the chunk ran to the next comma. A shorter first chunk is the cheapest latency fix this run points to; section 6.12 tests it.
 - With thinking on, the time to the first speech chunk rises from 0.95 s to 2.32 s and there is no filler; with thinking off, the filler arrives first and the answer waits behind it (5.80 s vs 3.95 s).
 - Per run, the first-audio median was 2.96 / 2.86 s (`vad`), 2.85 / 2.78 s (`smart`) and 4.47 / 3.87 s (`vad-think`).
 - Sensitivity: at the full-load speech timings (`local_timing_loaded.json`) the clean-task first-audio median would be about 3.9 s (`vad`), 4.1 s (`smart`) and 4.8 s (`vad-think`), a static re-estimate without re-simulating the conversation.
@@ -231,7 +231,7 @@ Together, 6.7 and 6.8 show that this recognizer cannot tell a hum from a short c
 
 ### 6.9 Follow-up: a 0.5 s minimum as well as words
 
-LiveKit counts an interruption only when the speech has lasted at least `min_duration` (default 0.5 s) and, if set, has `min_words`. The arm `vad-think-words-dur` adds that default to the word rule of 6.7 (auto-detect): the agent stops only when a read holds two units and the held speech has 0.5 s of voiced frames; a stretch with less voiced time is dropped whatever it says. The 0.5 s is LiveKit's default, not a value fitted to these items. Plan and five expectations: [`PREREGISTRATION.md`](PREREGISTRATION.md) addendum A3. A first attempt failed at the first model call because the API account had no credit (kept in `results/aborted/`, not scored); the arm then ran twice over all 42 items with the same files. Tables: `results/dur_vs_base.md`.
+LiveKit counts an interruption only when the speech has lasted at least `min_duration` (default 0.5 s) and, if set, has `min_words`. The arm `vad-think-words-dur` adds that default to the word rule of 6.7 (auto-detect): the agent stops only when a read holds two units and the held speech has 0.5 s of voiced frames; a stretch with less voiced time is dropped whatever it says. The 0.5 s is LiveKit's default, not a value fitted to these items. Plan and five expectations: [`PREREGISTRATION.md`](PREREGISTRATION.md) addendum A3. A first attempt stopped at the first model call, which the API rejected for billing (kept in `results/aborted/`, not scored); the arm then ran twice over all 42 items with the same files. Tables: `results/dur_vs_base.md`.
 
 | | `vad-think` | `vad-think-words` | `vad-think-words-dur` |
 |---|---|---|---|
@@ -296,7 +296,7 @@ Of the settings tried, only pausing keeps the 0.26 s stop and still keeps the re
 
 ### 6.11 Offline check: an acoustic backchannel detector
 
-Every rule so far judged the held speech by its transcript, and the recognizer writes 嗯 and 嗯嗯 as foreign syllables. MaAI (Kyoto University; code MIT, model weights CC BY-NC-ND 4.0) includes `bc_det`, which hears both sides of the conversation and gives, every 80 ms, the probability that the user is backchanneling. Chinese, English and Japanese versions run on a CPU. Before any scored run it was tried offline on the saved two-channel recordings of 6.9 and 6.10 (`eval/bcdet_offline_check.py`, no model calls; table: `results/bcdet_offline_check.md`).
+Every rule so far judged the held speech by its transcript, and the recognizer writes 嗯 and 嗯嗯 as foreign syllables. MaAI (Kyoto University; code MIT; the Chinese model's weights CC BY-NC-ND 4.0, the English model lists no licence) includes `bc_det`, which hears both sides of the conversation and gives, every 80 ms, the probability that the user is backchanneling. Chinese, English and Japanese versions run on a CPU. Before any scored run it was tried offline on the saved two-channel recordings of 6.9 and 6.10 (`eval/bcdet_offline_check.py`, no model calls; table: `results/bcdet_offline_check.md`).
 
 The rule was fixed before any output was seen. A held stretch counts as a backchannel if the score reaches 0.45 within 0.8 s of the onset; 0.45 is MaAI's event-level threshold for its Japanese data. A scored round would follow only if this got more of the 24 backchannel and interruption stretches right than the word-and-duration rule of 6.9, which got 22.
 
@@ -479,7 +479,7 @@ The price is about 11 s more per cancellation, and one new way for a paused requ
 
 The confirmation of 6.13 and 6.15 restated date, time and every attendee, so a cancel came a median 14 s after the request. Bixby's design guide asks for "a brief and direct question" at a confirmation moment. The arm `vad-think-combo-brief` is `vad-think-combo` with one change: when the cancel is held, the model is asked for one very short question with the meeting's date, time and title only, and given an example (「取消明天下午两点的设计评审吗？」). Plan and five expectations: [`PREREGISTRATION.md`](PREREGISTRATION.md) addendum A9. Tables: `results/followups_vs_combo.md`.
 
-The second run was interrupted after 10 items, when the session running it restarted. It was resumed two hours later with unchanged files, and the 10 completed items were kept. Their token use, which the interrupted run had not written out, was added back from the per-call counts in their traces.
+The second run stopped after 10 items. It was resumed two hours later with unchanged files, and the 10 completed items were kept. Their token use, which the interrupted run had not written out, was added back from the per-call counts in their traces.
 
 | | `vad-think-combo` | `vad-think-combo-brief` |
 |---|---|---|
@@ -568,7 +568,7 @@ Two items were changed before any run, because both recognizers misheard a keywo
   - In D06 (「明天早上八点，呃，八点半…」) the recognizer wrote 「8点鄂8点半」. The model read it as 8:00 to 8:30 and set the reminder at 8:00 (run1, both arms), or asked again instead of acting (run2, both arms). None of the four audio item-runs set 8:30, which the text-only control set both times.
   - In D04 a pause became 「已」 (「明天的那个已算了…」). Twice the model asked whether 「算了」 meant cancelling instead of moving the meeting.
 - **New voices did not change the result.** The four copied items passed in all 8 item-runs, as their sources did in the original voices.
-- **Run note.** The first run of `vad-think` stopped after 10 items when the session running it restarted. It was resumed with unchanged files, and the token use of the 10 completed items was added back from their traces, as in 6.16.
+- **Run note.** The first run of `vad-think` stopped after 10 items. It was resumed with unchanged files, and the token use of the 10 completed items was added back from their traces, as in 6.16.
 - **Cost:** 0.047 USD for the three arms.
 
 | # | Expectation written before these items ran | Result |
@@ -703,7 +703,7 @@ Three cases worth describing:
 - **Small and repeated.** 42 items, two runs; one item flipping is noise. Interruption and backchannel moments are fixed offsets into the answer.
 - **One machine, one network.** Model latency includes the network path from this machine to the API, and the API was shared with other jobs on the same account during the run (rate-limit retries were excluded from timings).
 - **Construction.** Items, answers and the agent prompt were written by the same author; two items were rephrased after the recognizer check and before any agent run.
-- **No end-to-end model yet.** No realtime speech-to-speech model was run; registering for one is a decision for the account owner.
+- **No end-to-end model yet.** No realtime speech-to-speech model was run.
 
 ## 10. Next steps
 
