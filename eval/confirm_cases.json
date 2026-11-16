@@ -1,0 +1,156 @@
+{
+ "about": "Addendum A6 only: four cancel requests whose user answers a confirmation question (yes, yes, no, yes). Written before any run of the confirm arm; scored with score.py --cases. Answers are fixed when the item is written.",
+ "speakers": {
+  "zh": [
+   3,
+   18,
+   47,
+   61,
+   88
+  ],
+  "en": [
+   0,
+   2
+  ]
+ },
+ "noise": {
+  "pink": {
+   "snr_db": 5
+  },
+  "babble": {
+   "snr_db": 15
+  }
+ },
+ "babble_lines": [
+  "今天下午的会议室已经订满了，我们只能改到明天再说。",
+  "这家店的咖啡还不错，就是排队的人有点多。",
+  "你上周发给我的那份表格，我还没来得及看完。",
+  "地铁二号线今天早上又晚点了二十分钟。",
+  "周末要不要一起去爬山，天气预报说是晴天。",
+  "这个版本的设计稿颜色太暗了，客户可能不会喜欢。"
+ ],
+ "items": [
+  {
+   "id": "C01",
+   "cat": "task",
+   "lang": "zh",
+   "segments": [
+    {
+     "role": "request",
+     "text": "把明天的设计评审取消掉。",
+     "at": {
+      "abs": 0.8
+     }
+    },
+    {
+     "role": "answer",
+     "text": "对，取消吧。",
+     "at": {
+      "after_agent_end": 0.6
+     }
+    }
+   ],
+   "expect": {
+    "remove": [
+     "M002"
+    ]
+   },
+   "slots": [
+    [
+     "设计评审"
+    ]
+   ]
+  },
+  {
+   "id": "C02",
+   "cat": "task",
+   "lang": "en",
+   "segments": [
+    {
+     "role": "request",
+     "text": "Please cancel the design review for tomorrow.",
+     "at": {
+      "abs": 0.8
+     }
+    },
+    {
+     "role": "answer",
+     "text": "Yes, cancel it.",
+     "at": {
+      "after_agent_end": 0.6
+     }
+    }
+   ],
+   "expect": {
+    "remove": [
+     "M002"
+    ]
+   },
+   "slots": [
+    [
+     "design review"
+    ]
+   ]
+  },
+  {
+   "id": "C03",
+   "cat": "task",
+   "lang": "zh",
+   "segments": [
+    {
+     "role": "request",
+     "text": "帮我取消明天的周会。",
+     "at": {
+      "abs": 0.8
+     }
+    },
+    {
+     "role": "answer",
+     "text": "算了，先不取消了。",
+     "at": {
+      "after_agent_end": 0.6
+     }
+    }
+   ],
+   "expect": {
+    "no_mutation": true
+   },
+   "slots": [
+    [
+     "周会"
+    ]
+   ]
+  },
+  {
+   "id": "C04",
+   "cat": "task",
+   "lang": "mix",
+   "segments": [
+    {
+     "role": "request",
+     "text": "把明天下午的 design review 取消掉。",
+     "at": {
+      "abs": 0.8
+     }
+    },
+    {
+     "role": "answer",
+     "text": "对，取消。",
+     "at": {
+      "after_agent_end": 0.6
+     }
+    }
+   ],
+   "expect": {
+    "remove": [
+     "M002"
+    ]
+   },
+   "slots": [
+    [
+     "design review"
+    ]
+   ]
+  }
+ ]
+}

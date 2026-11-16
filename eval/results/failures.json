@@ -1,0 +1,1350 @@
+[
+ {
+  "arm": "vad",
+  "run": "run1",
+  "item": "T07",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "十点"
+  ],
+  "asr": [
+   "后天上午0点和陈静，刘洋开个半小时的会。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run1",
+  "item": "T09",
+  "cause": "MODEL",
+  "checks": {
+   "state": false,
+   "ask_first": true
+  },
+  "interaction": {},
+  "slots_missing": [],
+  "asr": [
+   "帮我约张伟开个会议。",
+   "明天下午2点半个小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run1",
+  "item": "T14",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "tom"
+  ],
+  "asr": [
+   "帮我约汤明天下午4点开个s半小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run1",
+  "item": "I05",
+  "cause": "COMMITTED",
+  "checks": {
+   "state": false,
+   "no_mutation": false
+  },
+  "interaction": {
+   "stopped": true
+  },
+  "slots_missing": [],
+  "asr": [
+   "帮我取消明天的周会。",
+   "等一下，先别取消。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run1",
+  "item": "B01",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "明天有哪些会议？",
+   "Meium."
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run1",
+  "item": "B02",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "明天上海天气怎么样？",
+   "ねなや？"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run1",
+  "item": "B03",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "后天有什么安排？",
+   "好的。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run1",
+  "item": "B04",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "What meetings do I have tomorrow?",
+   "Okay."
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run1",
+  "item": "N03",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "周会"
+  ],
+  "asr": [
+   "明天的都会推迟一个小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run1",
+  "item": "N04",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "tom"
+  ],
+  "asr": [
+   "帮我约康，明天下午4点开个算半小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run1",
+  "item": "N05",
+  "cause": "NOISE-VAD",
+  "checks": {
+   "state": true,
+   "no_mutation": true,
+   "weather_call": true,
+   "said": false
+  },
+  "interaction": {},
+  "slots_missing": [],
+  "asr": [
+   "后天杭州会下雨吗？我还道。",
+   "后天杭州会下雨吗？版。",
+   "家设咖就的周号线天在收货货咖据报说是排的这个版本的设计周客户。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run1",
+  "item": "I07",
+  "cause": "MODEL",
+  "checks": {
+   "state": false
+  },
+  "interaction": {
+   "stopped": true
+  },
+  "slots_missing": [],
+  "asr": [
+   "帮我约M后，天上51点开会半小时。",
+   "登一下改成one hour。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run2",
+  "item": "T07",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "十点"
+  ],
+  "asr": [
+   "后天上午0点和陈静，刘洋开个半小时的会。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run2",
+  "item": "T09",
+  "cause": "MODEL",
+  "checks": {
+   "state": false,
+   "ask_first": true
+  },
+  "interaction": {},
+  "slots_missing": [],
+  "asr": [
+   "帮我约张伟开个会议。",
+   "明天下午2点半个小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run2",
+  "item": "T14",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "tom"
+  ],
+  "asr": [
+   "帮我约汤明天下午4点开个s半小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run2",
+  "item": "I03",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "stopped": true,
+   "quiet_after": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "明天有哪些会议？",
+   "好了，不用说了。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run2",
+  "item": "I05",
+  "cause": "COMMITTED",
+  "checks": {
+   "state": false,
+   "no_mutation": false
+  },
+  "interaction": {
+   "stopped": true
+  },
+  "slots_missing": [],
+  "asr": [
+   "帮我取消明天的周会。",
+   "等一下先别取消。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run2",
+  "item": "B01",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "明天有哪些会议？",
+   "Meium."
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run2",
+  "item": "B02",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "明天上海天气怎么样？",
+   "ねなんや？"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run2",
+  "item": "B03",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "后天有什么安排？",
+   "好的。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run2",
+  "item": "B04",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "What meetings do I have tomorrow?",
+   "Okay."
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run2",
+  "item": "N03",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "周会"
+  ],
+  "asr": [
+   "明天的都会推迟一个小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run2",
+  "item": "N04",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "tom"
+  ],
+  "asr": [
+   "帮我约康，明天下午4点开个算半小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run2",
+  "item": "N05",
+  "cause": "NOISE-VAD",
+  "checks": {
+   "state": true,
+   "no_mutation": true,
+   "weather_call": true,
+   "said": false
+  },
+  "interaction": {},
+  "slots_missing": [],
+  "asr": [
+   "后天杭州会下雨吗？我还道。",
+   "后天杭州会下雨吗？版。",
+   "家设咖就的周号线天在收货货咖据报说是排的这个版本的设计周客户。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad",
+  "run": "run2",
+  "item": "I07",
+  "cause": "MODEL",
+  "checks": {
+   "state": false
+  },
+  "interaction": {
+   "stopped": true
+  },
+  "slots_missing": [],
+  "asr": [
+   "帮我约M后，天上51点开会半小时。",
+   "登一下改成one hour。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run1",
+  "item": "T07",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "十点"
+  ],
+  "asr": [
+   "后天上午0点和沉静。",
+   "后天上午0点和陈静刘洋开个半小时的会。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run1",
+  "item": "T09",
+  "cause": "MODEL",
+  "checks": {
+   "state": false,
+   "ask_first": true
+  },
+  "interaction": {},
+  "slots_missing": [],
+  "asr": [
+   "帮我约张伟开个会议。",
+   "明天下午2点半个小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run1",
+  "item": "T14",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "tom"
+  ],
+  "asr": [
+   "帮我约汤，明天下午4点开个s。",
+   "帮我约汤明天下午4点开个s半小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run1",
+  "item": "I05",
+  "cause": "COMMITTED",
+  "checks": {
+   "state": false,
+   "no_mutation": false
+  },
+  "interaction": {
+   "stopped": true
+  },
+  "slots_missing": [],
+  "asr": [
+   "帮我取消明天的周会。",
+   "等一下，先别取消。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run1",
+  "item": "B01",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "明天有哪些会议？",
+   "Me you."
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run1",
+  "item": "B02",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "明天上海天气怎么样？",
+   "ね何や？"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run1",
+  "item": "B03",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "后天有什么安排？",
+   "好的。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run1",
+  "item": "B04",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "What meetings do I have tomorrow?",
+   "Okay."
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run1",
+  "item": "N04",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "tom"
+  ],
+  "asr": [
+   "帮我约康，明天下午4点开个送半小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run1",
+  "item": "N05",
+  "cause": "NOISE-VAD",
+  "checks": {
+   "state": true,
+   "no_mutation": true,
+   "weather_call": true,
+   "said": false
+  },
+  "interaction": {},
+  "slots_missing": [],
+  "asr": [
+   "后天杭州会下雨吗？。",
+   "后天杭州会下雨吗？版。",
+   "家设咖就的周号线天在收货货咖据报说是排的这个版本的设计周客户。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run1",
+  "item": "N06",
+  "cause": "NOISE-VAD",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "十点"
+  ],
+  "asr": [
+   "后天上50点和陈静，刘洋开个半小时的会周发上是上。",
+   "家设咖就的周号线天在收货货咖据报说是排的这个版本的设计周客户。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run1",
+  "item": "P03",
+  "cause": "ENDPOINT",
+  "checks": {
+   "state": true
+  },
+  "interaction": {
+   "no_takeover_in_pause": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "提醒我后天。",
+   "下午3点去取快递。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run1",
+  "item": "I07",
+  "cause": "MODEL",
+  "checks": {
+   "state": false
+  },
+  "interaction": {
+   "stopped": true
+  },
+  "slots_missing": [],
+  "asr": [
+   "帮我约em后，天上51点开会半小时。",
+   "登一下改成one hour。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run2",
+  "item": "T07",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "十点"
+  ],
+  "asr": [
+   "后天上午0点和沉静。",
+   "后天上午0点和陈静刘洋开个半小时的会。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run2",
+  "item": "T09",
+  "cause": "MODEL",
+  "checks": {
+   "state": false,
+   "ask_first": true
+  },
+  "interaction": {},
+  "slots_missing": [],
+  "asr": [
+   "帮我约张伟开个会议。",
+   "明天下午2点半个小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run2",
+  "item": "T14",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "tom"
+  ],
+  "asr": [
+   "帮我约汤，明天下午4点开个s。",
+   "帮我约汤明天下午4点开个s半小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run2",
+  "item": "I05",
+  "cause": "COMMITTED",
+  "checks": {
+   "state": false,
+   "no_mutation": false
+  },
+  "interaction": {
+   "stopped": true
+  },
+  "slots_missing": [],
+  "asr": [
+   "帮我取消明天的周会。",
+   "等一下，先别取消。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run2",
+  "item": "B01",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "明天有哪些会议？",
+   "Ma you."
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run2",
+  "item": "B02",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "明天上海天气怎么样？",
+   "ねなや？"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run2",
+  "item": "B03",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "后天有什么安排？",
+   "好的。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run2",
+  "item": "B04",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "What meetings do I have tomorrow?",
+   "Okay."
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run2",
+  "item": "N04",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "tom"
+  ],
+  "asr": [
+   "帮我约康，明天下午4点开个送半小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run2",
+  "item": "N06",
+  "cause": "NOISE-VAD",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "十点"
+  ],
+  "asr": [
+   "后天上50点和陈静，刘洋开个半小时的会周发上是上。",
+   "家设咖就的周号线天在收货货咖据报说是排的这个版本的设计周客户。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run2",
+  "item": "P05",
+  "cause": "ENDPOINT",
+  "checks": {
+   "state": true
+  },
+  "interaction": {
+   "no_takeover_in_pause": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "Book a meeting with Tom Lee.",
+   "Tomorrow at 11 in the morning for one hours."
+  ],
+  "notes": []
+ },
+ {
+  "arm": "smart",
+  "run": "run2",
+  "item": "I07",
+  "cause": "COMMITTED",
+  "checks": {
+   "state": false
+  },
+  "interaction": {
+   "stopped": true
+  },
+  "slots_missing": [],
+  "asr": [
+   "帮我约em后，天上51点开会半小时。",
+   "登一下改成one hour。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run1",
+  "item": "T07",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "十点"
+  ],
+  "asr": [
+   "后天上午0点和陈静，刘洋开个半小时的会。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run1",
+  "item": "T09",
+  "cause": "MODEL",
+  "checks": {
+   "state": false,
+   "ask_first": true
+  },
+  "interaction": {},
+  "slots_missing": [],
+  "asr": [
+   "帮我约张伟开个会议。",
+   "明天下午2点半个小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run1",
+  "item": "T14",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "tom"
+  ],
+  "asr": [
+   "帮我约汤明天下午4点开个s半小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run1",
+  "item": "I03",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "stopped": true,
+   "quiet_after": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "明天有哪些会议？",
+   "好了，不用说了。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run1",
+  "item": "I05",
+  "cause": "COMMITTED",
+  "checks": {
+   "state": false,
+   "no_mutation": false
+  },
+  "interaction": {
+   "stopped": true
+  },
+  "slots_missing": [],
+  "asr": [
+   "帮我取消明天的周会。",
+   "等一下，先别取消。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run1",
+  "item": "B01",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "明天有哪些会议？",
+   "Meium."
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run1",
+  "item": "B02",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "明天上海天气怎么样？",
+   "ねなや？"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run1",
+  "item": "B03",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "后天有什么安排？",
+   "好的。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run1",
+  "item": "B04",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "What meetings do I have tomorrow?",
+   "Okay."
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run1",
+  "item": "N03",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "周会"
+  ],
+  "asr": [
+   "明天的都会推迟一个小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run1",
+  "item": "N04",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "tom"
+  ],
+  "asr": [
+   "帮我约康，明天下午4点开个算半小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run1",
+  "item": "I07",
+  "cause": "MODEL",
+  "checks": {
+   "state": false
+  },
+  "interaction": {
+   "stopped": true
+  },
+  "slots_missing": [],
+  "asr": [
+   "帮我约M后，天上51点开会半小时。",
+   "登一下改成one hour。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run2",
+  "item": "T07",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "十点"
+  ],
+  "asr": [
+   "后天上午0点和陈静，刘洋开个半小时的会。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run2",
+  "item": "T09",
+  "cause": "MODEL",
+  "checks": {
+   "state": false,
+   "ask_first": true
+  },
+  "interaction": {},
+  "slots_missing": [],
+  "asr": [
+   "帮我约张伟开个会议。",
+   "明天下午2点半个小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run2",
+  "item": "T14",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "tom"
+  ],
+  "asr": [
+   "帮我约汤明天下午4点开个s半小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run2",
+  "item": "I05",
+  "cause": "COMMITTED",
+  "checks": {
+   "state": false,
+   "no_mutation": false
+  },
+  "interaction": {
+   "stopped": true
+  },
+  "slots_missing": [],
+  "asr": [
+   "帮我取消明天的周会。",
+   "等一下先别取消。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run2",
+  "item": "B01",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "明天有哪些会议？",
+   "Meium."
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run2",
+  "item": "B02",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "明天上海天气怎么样？",
+   "ねなんや？"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run2",
+  "item": "B03",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "后天有什么安排？",
+   "好的。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run2",
+  "item": "B04",
+  "cause": "BARGE-IN",
+  "checks": {
+   "state": true,
+   "no_mutation": true
+  },
+  "interaction": {
+   "kept_talking": false
+  },
+  "slots_missing": [],
+  "asr": [
+   "What meetings do I have tomorrow?",
+   "Okay."
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run2",
+  "item": "N03",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "周会"
+  ],
+  "asr": [
+   "明天的都会推迟一个小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run2",
+  "item": "N04",
+  "cause": "ASR",
+  "checks": {
+   "state": false
+  },
+  "interaction": {},
+  "slots_missing": [
+   "tom"
+  ],
+  "asr": [
+   "帮我约康，明天下午4点开个算半小时。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "vad-think",
+  "run": "run2",
+  "item": "I07",
+  "cause": "MODEL",
+  "checks": {
+   "state": false
+  },
+  "interaction": {
+   "stopped": true
+  },
+  "slots_missing": [],
+  "asr": [
+   "帮我约M后，天上51点开会半小时。",
+   "登一下改成one hour。"
+  ],
+  "notes": []
+ },
+ {
+  "arm": "oracle",
+  "run": "run1",
+  "item": "I05",
+  "checks": {
+   "state": false,
+   "no_mutation": false
+  }
+ },
+ {
+  "arm": "oracle",
+  "run": "run2",
+  "item": "I05",
+  "checks": {
+   "state": false,
+   "no_mutation": false
+  }
+ }
+]

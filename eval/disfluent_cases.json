@@ -1,0 +1,521 @@
+{
+ "about": "Addendum A12 only: ten requests with disfluencies (repetitions, replacements and restarts, the three types of LARD, plus fillers) and four clean requests copied from T01, T02, T05 and T11, all in Kokoro voices not used by the 42 items. Answers are fixed when the item is written; scored with score.py --cases.",
+ "speakers": {
+  "zh": [
+   10,
+   26,
+   39,
+   66,
+   79,
+   99
+  ],
+  "en": [
+   1
+  ]
+ },
+ "noise": {
+  "pink": {
+   "snr_db": 5
+  },
+  "babble": {
+   "snr_db": 15
+  }
+ },
+ "babble_lines": [
+  "今天下午的会议室已经订满了，我们只能改到明天再说。",
+  "这家店的咖啡还不错，就是排队的人有点多。",
+  "你上周发给我的那份表格，我还没来得及看完。",
+  "地铁二号线今天早上又晚点了二十分钟。",
+  "周末要不要一起去爬山，天气预报说是晴天。",
+  "这个版本的设计稿颜色太暗了，客户可能不会喜欢。"
+ ],
+ "items": [
+  {
+   "id": "D01",
+   "cat": "task",
+   "lang": "zh",
+   "kind": "repetition",
+   "segments": [
+    {
+     "role": "request",
+     "text": "帮我查查查一下明天上海的天气。",
+     "at": {
+      "abs": 0.8
+     }
+    }
+   ],
+   "expect": {
+    "weather": {
+     "city": "上海",
+     "date": "2026-11-17"
+    },
+    "say_any": [
+     "18",
+     "十八"
+    ],
+    "no_mutation": true
+   },
+   "slots": [
+    [
+     "上海"
+    ],
+    [
+     "明天"
+    ]
+   ]
+  },
+  {
+   "id": "D02",
+   "cat": "task",
+   "lang": "zh",
+   "kind": "fillers",
+   "segments": [
+    {
+     "role": "request",
+     "text": "呃……帮我，嗯，查一下明天成都冷不冷。",
+     "at": {
+      "abs": 0.8
+     }
+    }
+   ],
+   "expect": {
+    "weather": {
+     "city": "成都",
+     "date": "2026-11-17"
+    },
+    "say_any": [
+     "12",
+     "十二",
+     "8",
+     "八"
+    ],
+    "no_mutation": true
+   },
+   "slots": [
+    [
+     "成都"
+    ],
+    [
+     "明天"
+    ]
+   ]
+  },
+  {
+   "id": "D03",
+   "cat": "task",
+   "lang": "zh",
+   "kind": "replacement",
+   "segments": [
+    {
+     "role": "request",
+     "text": "帮我约张伟，不对，约李娜，明天下午三点开会，一个小时。",
+     "at": {
+      "abs": 0.8
+     }
+    }
+   ],
+   "expect": {
+    "add": [
+     {
+      "date": "2026-11-17",
+      "start_time": "15:00",
+      "duration_minutes": 60,
+      "attendees": [
+       "李娜"
+      ]
+     }
+    ]
+   },
+   "slots": [
+    [
+     "李娜"
+    ],
+    [
+     "三点",
+     "3点",
+     "15点",
+     "15:00"
+    ]
+   ]
+  },
+  {
+   "id": "D04",
+   "cat": "task",
+   "lang": "zh",
+   "kind": "restart",
+   "segments": [
+    {
+     "role": "request",
+     "text": "明天的那个……算了，把明天下午两点的会改到四点。",
+     "at": {
+      "abs": 0.8
+     }
+    }
+   ],
+   "expect": {
+    "change": {
+     "M002": {
+      "start_time": "16:00"
+     }
+    }
+   },
+   "slots": [
+    [
+     "两点",
+     "2点",
+     "14点",
+     "14:00"
+    ],
+    [
+     "四点",
+     "4点",
+     "16点",
+     "16:00"
+    ]
+   ]
+  },
+  {
+   "id": "D05",
+   "cat": "task",
+   "lang": "zh",
+   "kind": "repetition",
+   "segments": [
+    {
+     "role": "request",
+     "text": "后天，后天杭州会下雨吗？",
+     "at": {
+      "abs": 0.8
+     }
+    }
+   ],
+   "expect": {
+    "weather": {
+     "city": "杭州",
+     "date": "2026-11-18"
+    },
+    "say_any": [
+     "雨"
+    ],
+    "no_mutation": true
+   },
+   "slots": [
+    [
+     "杭州"
+    ],
+    [
+     "后天"
+    ]
+   ]
+  },
+  {
+   "id": "D06",
+   "cat": "task",
+   "lang": "zh",
+   "kind": "replacement",
+   "segments": [
+    {
+     "role": "request",
+     "text": "提醒我明天早上八点，呃，八点半给王强打电话。",
+     "at": {
+      "abs": 0.8
+     }
+    }
+   ],
+   "expect": {
+    "reminders": [
+     {
+      "date": "2026-11-17",
+      "time": "08:30"
+     }
+    ]
+   },
+   "slots": [
+    [
+     "八点半",
+     "8点半",
+     "8:30"
+    ],
+    [
+     "王强"
+    ]
+   ]
+  },
+  {
+   "id": "D07",
+   "cat": "task",
+   "lang": "en",
+   "kind": "fillers",
+   "segments": [
+    {
+     "role": "request",
+     "text": "Um, what is the, uh, weather in Singapore tomorrow?",
+     "at": {
+      "abs": 0.8
+     }
+    }
+   ],
+   "expect": {
+    "weather": {
+     "city": "新加坡",
+     "date": "2026-11-17"
+    },
+    "say_any": [
+     "30",
+     "thirty"
+    ],
+    "no_mutation": true
+   },
+   "slots": [
+    [
+     "singapore"
+    ],
+    [
+     "tomorrow"
+    ]
+   ]
+  },
+  {
+   "id": "D08",
+   "cat": "task",
+   "lang": "en",
+   "kind": "replacement",
+   "segments": [
+    {
+     "role": "request",
+     "text": "Schedule a meeting with Emma Smith tomorrow at two, no, at three in the afternoon, for half an hour.",
+     "at": {
+      "abs": 0.8
+     }
+    }
+   ],
+   "expect": {
+    "add": [
+     {
+      "date": "2026-11-17",
+      "start_time": "15:00",
+      "duration_minutes": 30,
+      "attendees": [
+       "Emma Smith"
+      ]
+     }
+    ]
+   },
+   "slots": [
+    [
+     "emma"
+    ],
+    [
+     "three",
+     "3"
+    ],
+    [
+     "half an hour",
+     "thirty",
+     "30"
+    ]
+   ]
+  },
+  {
+   "id": "D09",
+   "cat": "task",
+   "lang": "mix",
+   "kind": "restart",
+   "segments": [
+    {
+     "role": "request",
+     "text": "那个，就是明天的 weekly meeting，推迟一个小时。",
+     "at": {
+      "abs": 0.8
+     }
+    }
+   ],
+   "expect": {
+    "change": {
+     "M001": {
+      "start_time": "11:00"
+     }
+    }
+   },
+   "slots": [
+    [
+     "weekly"
+    ],
+    [
+     "推迟"
+    ],
+    [
+     "一个小时",
+     "1个小时",
+     "一小时",
+     "1小时"
+    ]
+   ]
+  },
+  {
+   "id": "D10",
+   "cat": "task",
+   "lang": "zh",
+   "kind": "fillers",
+   "segments": [
+    {
+     "role": "request",
+     "text": "帮我看一下……呃……后天有什么安排。",
+     "at": {
+      "abs": 0.8
+     }
+    }
+   ],
+   "expect": {
+    "no_mutation": true,
+    "say_any": [
+     "16",
+     "四点",
+     "4点",
+     "Tom"
+    ]
+   },
+   "slots": [
+    [
+     "后天"
+    ]
+   ]
+  },
+  {
+   "id": "V01",
+   "cat": "task",
+   "lang": "zh",
+   "kind": "new voice",
+   "segments": [
+    {
+     "role": "request",
+     "text": "帮我查一下明天上海的天气。",
+     "at": {
+      "abs": 0.8
+     }
+    }
+   ],
+   "expect": {
+    "weather": {
+     "city": "上海",
+     "date": "2026-11-17"
+    },
+    "say_any": [
+     "18",
+     "十八"
+    ],
+    "no_mutation": true
+   },
+   "slots": [
+    [
+     "上海"
+    ],
+    [
+     "明天"
+    ]
+   ]
+  },
+  {
+   "id": "V02",
+   "cat": "task",
+   "lang": "zh",
+   "kind": "new voice",
+   "segments": [
+    {
+     "role": "request",
+     "text": "后天杭州会下雨吗？",
+     "at": {
+      "abs": 0.8
+     }
+    }
+   ],
+   "expect": {
+    "weather": {
+     "city": "杭州",
+     "date": "2026-11-18"
+    },
+    "say_any": [
+     "雨"
+    ],
+    "no_mutation": true
+   },
+   "slots": [
+    [
+     "杭州"
+    ],
+    [
+     "后天"
+    ]
+   ]
+  },
+  {
+   "id": "V03",
+   "cat": "task",
+   "lang": "zh",
+   "kind": "new voice",
+   "segments": [
+    {
+     "role": "request",
+     "text": "明天的周会推迟一个小时。",
+     "at": {
+      "abs": 0.8
+     }
+    }
+   ],
+   "expect": {
+    "change": {
+     "M001": {
+      "start_time": "11:00"
+     }
+    }
+   },
+   "slots": [
+    [
+     "周会"
+    ],
+    [
+     "推迟"
+    ],
+    [
+     "一个小时",
+     "1个小时",
+     "一小时",
+     "1小时"
+    ]
+   ]
+  },
+  {
+   "id": "V04",
+   "cat": "task",
+   "lang": "en",
+   "kind": "new voice",
+   "segments": [
+    {
+     "role": "request",
+     "text": "What is the weather in Singapore tomorrow?",
+     "at": {
+      "abs": 0.8
+     }
+    }
+   ],
+   "expect": {
+    "weather": {
+     "city": "新加坡",
+     "date": "2026-11-17"
+    },
+    "say_any": [
+     "30",
+     "thirty"
+    ],
+    "no_mutation": true
+   },
+   "slots": [
+    [
+     "singapore"
+    ],
+    [
+     "tomorrow"
+    ]
+   ]
+  }
+ ]
+}

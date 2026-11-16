@@ -1,0 +1,170 @@
+{
+ "sample_rate": 16000,
+ "target_rms": 0.05,
+ "items": {
+  "D01": {
+   "speaker": 10,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "D01/seg0.wav",
+     "dur": 3.285,
+     "sha256": "a0a876f4bfe1"
+    }
+   ]
+  },
+  "D02": {
+   "speaker": 26,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "D02/seg0.wav",
+     "dur": 4.958,
+     "sha256": "8cc2c58677c9"
+    }
+   ]
+  },
+  "D03": {
+   "speaker": 39,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "D03/seg0.wav",
+     "dur": 6.73,
+     "sha256": "114f2dc17ee9"
+    }
+   ]
+  },
+  "D04": {
+   "speaker": 66,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "D04/seg0.wav",
+     "dur": 6.875,
+     "sha256": "e77dd5e88e32"
+    }
+   ]
+  },
+  "D05": {
+   "speaker": 79,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "D05/seg0.wav",
+     "dur": 2.675,
+     "sha256": "cbf1f958e85b"
+    }
+   ]
+  },
+  "D06": {
+   "speaker": 99,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "D06/seg0.wav",
+     "dur": 4.921,
+     "sha256": "d06bd56c1778"
+    }
+   ]
+  },
+  "D07": {
+   "speaker": 1,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "D07/seg0.wav",
+     "dur": 2.89,
+     "sha256": "b5b48fdb8c04"
+    }
+   ]
+  },
+  "D08": {
+   "speaker": 1,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "D08/seg0.wav",
+     "dur": 5.797,
+     "sha256": "f0328bf370e4"
+    }
+   ]
+  },
+  "D09": {
+   "speaker": 10,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "D09/seg0.wav",
+     "dur": 4.444,
+     "sha256": "fd95e308b4e3"
+    }
+   ]
+  },
+  "D10": {
+   "speaker": 26,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "D10/seg0.wav",
+     "dur": 4.78,
+     "sha256": "efcc8a54e0be"
+    }
+   ]
+  },
+  "V01": {
+   "speaker": 39,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "V01/seg0.wav",
+     "dur": 3.002,
+     "sha256": "5c2e5988c76a"
+    }
+   ]
+  },
+  "V02": {
+   "speaker": 66,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "V02/seg0.wav",
+     "dur": 2.74,
+     "sha256": "ab15858818b4"
+    }
+   ]
+  },
+  "V03": {
+   "speaker": 79,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "V03/seg0.wav",
+     "dur": 2.88,
+     "sha256": "019d59214157"
+    }
+   ]
+  },
+  "V04": {
+   "speaker": 1,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "V04/seg0.wav",
+     "dur": 2.084,
+     "sha256": "a0397f7c3874"
+    }
+   ]
+  }
+ },
+ "noise": {
+  "pink": {
+   "file": "noise_pink.wav",
+   "sha256": "e9ec9495ade8"
+  },
+  "babble": {
+   "file": "noise_babble.wav",
+   "sha256": "50d2bd6b34d2"
+  }
+ }
+}

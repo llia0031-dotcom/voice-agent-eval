@@ -1,0 +1,33 @@
+{
+ "method": "linear fit of the wall times recorded by the smoke runs (01:08-01:29 MYT, 4 threads), before the machine became fully loaded; the same-day fastest-of-5 calibration under full load is kept in local_timing_loaded.json",
+ "sources": [
+  "eval/results\\smoke1\\vad.jsonl",
+  "eval/results\\smoke2\\oracle.jsonl",
+  "eval/results\\smoke2\\smart.jsonl",
+  "eval/results\\smoke2\\vad.jsonl",
+  "eval/results\\smoke3-adaptive\\vad.jsonl",
+  "eval/results\\smoke3-disabled\\vad.jsonl",
+  "eval/results\\smoke4\\oracle.jsonl",
+  "eval/results\\smoke4\\smart.jsonl",
+  "eval/results\\smoke4\\vad-think.jsonl",
+  "eval/results\\smoke4\\vad.jsonl",
+  "eval/results\\smoke5\\vad.jsonl",
+  "eval/results\\smoke6\\vad.jsonl"
+ ],
+ "asr": {
+  "intercept": 0.0014,
+  "slope": 0.0564,
+  "n": 57,
+  "x": "input audio seconds"
+ },
+ "tts": {
+  "intercept": 0.0353,
+  "slope": 0.3936,
+  "n": 246,
+  "x": "output audio seconds"
+ },
+ "smart_turn": {
+  "seconds": 0.0249,
+  "n": 12
+ }
+}

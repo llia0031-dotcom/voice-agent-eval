@@ -1,0 +1,25 @@
+{
+  "about": "Harness check only. Not scored, not part of the test set; written to exercise every code path before the frozen run.",
+  "speakers": {"zh": [25], "en": [1]},
+  "noise": {"pink": {"snr_db": 5}, "babble": {"snr_db": 15}},
+  "items": [
+    {"id": "S01", "cat": "task", "lang": "zh", "segments": [{"role": "request", "text": "今天广州热不热？", "at": {"abs": 0.8}}],
+     "expect": {"weather": {"city": "广州", "date": "2026-11-16"}, "say_any": ["26"], "no_mutation": true}, "slots": [["广州"]]},
+    {"id": "S02", "cat": "interrupt", "lang": "zh", "segments": [
+        {"role": "request", "text": "后天上午九点帮我和刘洋开个会。", "at": {"abs": 0.8}},
+        {"role": "interrupt", "text": "不对，改成十点。", "at": {"after_answer_start": 1.0}}],
+     "expect": {"add": [{"date": "2026-11-18", "start_time": "10:00", "duration_minutes": 30, "attendees": ["刘洋"]}], "stop": true},
+     "slots": [["十点", "10点"]]},
+    {"id": "S03", "cat": "pause", "lang": "zh", "noise": "babble", "segments": [
+        {"role": "request", "text": "帮我看看，", "at": {"abs": 0.8}},
+        {"role": "continuation", "text": "后天有什么会。", "at": {"after_prev_end": 1.6}},
+        {"role": "backchannel", "text": "嗯。", "at": {"after_answer_start": 1.2}}],
+     "expect": {"no_mutation": true, "no_stop": true}, "slots": []},
+    {"id": "S04", "cat": "task", "lang": "en", "segments": [
+        {"role": "request", "text": "Set up a call with Tom Lee.", "at": {"abs": 0.8}},
+        {"role": "answer", "text": "Tomorrow at five in the afternoon.", "at": {"after_agent_end": 0.8}}],
+     "expect": {"add": [{"date": "2026-11-17", "start_time": "17:00", "duration_minutes": 30, "attendees": ["Tom Lee"]}], "ask_first": true},
+     "slots": [["five", "5"]]}
+  ],
+  "babble_lines": ["我们明天几点出发？", "这个周末商场有活动。", "报告我已经发到群里了。"]
+}

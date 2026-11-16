@@ -1,0 +1,1986 @@
+{
+ "summary": {
+  "vad-think-combo-brief": {
+   "n": 4,
+   "task_pass": 4,
+   "interaction_pass": "4/4",
+   "strict_pass": 4,
+   "harness_errors": 0,
+   "latency_first_audio_median": 5.357,
+   "latency_first_audio_p90": 5.628,
+   "stop_latency_median": null,
+   "stops_measured": 0,
+   "reasoning_said_aloud": 0,
+   "strict_by_cat": {
+    "task": "4/4"
+   }
+  },
+  "vad-think-combo-plus": {
+   "n": 4,
+   "task_pass": 4,
+   "interaction_pass": "4/4",
+   "strict_pass": 4,
+   "harness_errors": 0,
+   "latency_first_audio_median": 4.319,
+   "latency_first_audio_p90": 4.466,
+   "stop_latency_median": null,
+   "stops_measured": 0,
+   "reasoning_said_aloud": 0,
+   "strict_by_cat": {
+    "task": "4/4"
+   }
+  },
+  "vad-think-combo": {
+   "n": 4,
+   "task_pass": 4,
+   "interaction_pass": "4/4",
+   "strict_pass": 4,
+   "harness_errors": 0,
+   "latency_first_audio_median": 4.922,
+   "latency_first_audio_p90": 5.087,
+   "stop_latency_median": null,
+   "stops_measured": 0,
+   "reasoning_said_aloud": 0,
+   "strict_by_cat": {
+    "task": "4/4"
+   }
+  },
+  "vad-think-confirm": {
+   "n": 4,
+   "task_pass": 4,
+   "interaction_pass": "4/4",
+   "strict_pass": 4,
+   "harness_errors": 0,
+   "latency_first_audio_median": 5.191,
+   "latency_first_audio_p90": 5.657,
+   "stop_latency_median": null,
+   "stops_measured": 0,
+   "reasoning_said_aloud": 0,
+   "strict_by_cat": {
+    "task": "4/4"
+   }
+  },
+  "vad-think": {
+   "n": 4,
+   "task_pass": 3,
+   "interaction_pass": "4/4",
+   "strict_pass": 3,
+   "harness_errors": 0,
+   "latency_first_audio_median": 5.559,
+   "latency_first_audio_p90": 6.51,
+   "stop_latency_median": null,
+   "stops_measured": 0,
+   "reasoning_said_aloud": 0,
+   "strict_by_cat": {
+    "task": "3/4"
+   }
+  }
+ },
+ "items": {
+  "vad-think-combo-brief": [
+   {
+    "item": "C01",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 5.383,
+      "answer_audio": 5.383,
+      "endpoint_wait": 0.583,
+      "asr": 0.1916,
+      "llm": 3.531,
+      "tools": 0.005,
+      "tts": 1.073,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 4.251,
+      "answer_audio": 4.251,
+      "endpoint_wait": 0.551,
+      "asr": 0.1086,
+      "llm": 2.4,
+      "tools": 0.005,
+      "tts": 1.187,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "把明天的设计评审取消掉。",
+      "对，取消吧。"
+     ]
+    }
+   },
+   {
+    "item": "C02",
+    "cat": "task",
+    "lang": "en",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 5.331,
+      "answer_audio": 5.331,
+      "endpoint_wait": 0.584,
+      "asr": 0.1681,
+      "llm": 3.083,
+      "tools": 0.003,
+      "tts": 1.493,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 3.621,
+      "answer_audio": 3.621,
+      "endpoint_wait": 0.553,
+      "asr": 0.1068,
+      "llm": 1.596,
+      "tools": 0.003,
+      "tts": 1.363,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "Please cancel the design review for tomorrow.",
+      "Yes, cancel it."
+     ]
+    }
+   },
+   {
+    "item": "C03",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.333,
+      "answer_audio": 4.333,
+      "endpoint_wait": 0.551,
+      "asr": 0.1735,
+      "llm": 2.898,
+      "tools": 0.003,
+      "tts": 0.707,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 1.721,
+      "answer_audio": 1.721,
+      "endpoint_wait": 0.539,
+      "asr": 0.1501,
+      "llm": 0.782,
+      "tools": 0,
+      "tts": 0.25,
+      "n_llm_calls_before_audio": 1
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "帮我取消明天的周会。",
+      "算了，先不取消了。"
+     ]
+    }
+   },
+   {
+    "item": "C04",
+    "cat": "task",
+    "lang": "mix",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 5.733,
+      "answer_audio": 5.733,
+      "endpoint_wait": 0.567,
+      "asr": 0.197,
+      "llm": 3.894,
+      "tools": 0.002,
+      "tts": 1.073,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 3.533,
+      "answer_audio": 3.533,
+      "endpoint_wait": 0.424,
+      "asr": 0.0995,
+      "llm": 1.821,
+      "tools": 0.002,
+      "tts": 1.187,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "把明天下午的design review取消掉。",
+      "对，取消。"
+     ]
+    }
+   }
+  ],
+  "vad-think-combo-plus": [
+   {
+    "item": "C01",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.503,
+      "answer_audio": 4.503,
+      "endpoint_wait": 0.583,
+      "asr": 0.1916,
+      "llm": 2.652,
+      "tools": 0.004,
+      "tts": 1.073,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 3.538,
+      "answer_audio": 3.538,
+      "endpoint_wait": 0.551,
+      "asr": 0.1086,
+      "llm": 1.689,
+      "tools": 0.002,
+      "tts": 1.187,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "把明天的设计评审取消掉。",
+      "对，取消吧。"
+     ]
+    }
+   },
+   {
+    "item": "C02",
+    "cat": "task",
+    "lang": "en",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.941,
+      "answer_audio": 3.941,
+      "endpoint_wait": 0.584,
+      "asr": 0.1681,
+      "llm": 2.658,
+      "tools": 0.002,
+      "tts": 0.529,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 4.103,
+      "answer_audio": 4.103,
+      "endpoint_wait": 0.553,
+      "asr": 0.1068,
+      "llm": 2.026,
+      "tools": 0.002,
+      "tts": 1.415,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "Please cancel the design review for tomorrow.",
+      "Yes, cancel it."
+     ]
+    }
+   },
+   {
+    "item": "C03",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.258,
+      "answer_audio": 4.258,
+      "endpoint_wait": 0.551,
+      "asr": 0.1735,
+      "llm": 2.6,
+      "tools": 0.002,
+      "tts": 0.931,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 1.615,
+      "answer_audio": 1.615,
+      "endpoint_wait": 0.539,
+      "asr": 0.1465,
+      "llm": 0.68,
+      "tools": 0,
+      "tts": 0.25,
+      "n_llm_calls_before_audio": 1
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "帮我取消明天的周会。",
+      "算了，先不取消了。"
+     ]
+    }
+   },
+   {
+    "item": "C04",
+    "cat": "task",
+    "lang": "mix",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.379,
+      "answer_audio": 4.379,
+      "endpoint_wait": 0.567,
+      "asr": 0.197,
+      "llm": 2.54,
+      "tools": 0.002,
+      "tts": 1.073,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 3.494,
+      "answer_audio": 3.494,
+      "endpoint_wait": 0.488,
+      "asr": 0.1031,
+      "llm": 1.714,
+      "tools": 0.002,
+      "tts": 1.187,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "把明天下午的design review取消掉。",
+      "对取消。"
+     ]
+    }
+   }
+  ],
+  "vad-think-combo": [
+   {
+    "item": "C01",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.786,
+      "answer_audio": 4.786,
+      "endpoint_wait": 0.583,
+      "asr": 0.1916,
+      "llm": 2.913,
+      "tools": 0.003,
+      "tts": 1.095,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 3.591,
+      "answer_audio": 3.591,
+      "endpoint_wait": 0.551,
+      "asr": 0.1086,
+      "llm": 1.742,
+      "tools": 0.002,
+      "tts": 1.187,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "把明天的设计评审取消掉。",
+      "对，取消吧。"
+     ]
+    }
+   },
+   {
+    "item": "C02",
+    "cat": "task",
+    "lang": "en",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 5.059,
+      "answer_audio": 5.059,
+      "endpoint_wait": 0.584,
+      "asr": 0.1681,
+      "llm": 3.164,
+      "tools": 0.002,
+      "tts": 1.141,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 4.211,
+      "answer_audio": 4.211,
+      "endpoint_wait": 0.553,
+      "asr": 0.1068,
+      "llm": 1.855,
+      "tools": 0.002,
+      "tts": 1.694,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "Please cancel the design review for tomorrow.",
+      "Yes, cancel it."
+     ]
+    }
+   },
+   {
+    "item": "C03",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.36,
+      "answer_audio": 4.36,
+      "endpoint_wait": 0.551,
+      "asr": 0.1735,
+      "llm": 2.739,
+      "tools": 0.002,
+      "tts": 0.894,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 1.68,
+      "answer_audio": 1.68,
+      "endpoint_wait": 0.539,
+      "asr": 0.1483,
+      "llm": 0.743,
+      "tools": 0,
+      "tts": 0.25,
+      "n_llm_calls_before_audio": 1
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "帮我取消明天的周会。",
+      "算了，先不取消了。"
+     ]
+    }
+   },
+   {
+    "item": "C04",
+    "cat": "task",
+    "lang": "mix",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 5.099,
+      "answer_audio": 5.099,
+      "endpoint_wait": 0.567,
+      "asr": 0.197,
+      "llm": 3.087,
+      "tools": 0.002,
+      "tts": 1.246,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 3.666,
+      "answer_audio": 3.666,
+      "endpoint_wait": 0.456,
+      "asr": 0.1013,
+      "llm": 1.92,
+      "tools": 0.002,
+      "tts": 1.187,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "把明天下午的design review取消掉。",
+      "对取消。"
+     ]
+    }
+   }
+  ],
+  "vad-think-confirm": [
+   {
+    "item": "C01",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.982,
+      "answer_audio": 4.982,
+      "endpoint_wait": 0.679,
+      "asr": 0.197,
+      "llm": 3.215,
+      "tools": 0.002,
+      "tts": 0.89,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 3.593,
+      "answer_audio": 3.593,
+      "endpoint_wait": 0.551,
+      "asr": 0.1068,
+      "llm": 1.746,
+      "tools": 0.003,
+      "tts": 1.187,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "把明天的设计评审取消掉。",
+      "对，取消吧。"
+     ]
+    }
+   },
+   {
+    "item": "C02",
+    "cat": "task",
+    "lang": "en",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.606,
+      "answer_audio": 4.606,
+      "endpoint_wait": 0.552,
+      "asr": 0.1663,
+      "llm": 2.745,
+      "tools": 0.002,
+      "tts": 1.141,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 4.238,
+      "answer_audio": 4.238,
+      "endpoint_wait": 0.681,
+      "asr": 0.1122,
+      "llm": 1.749,
+      "tools": 0.002,
+      "tts": 1.694,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "Please cancel the design review for tomorrow.",
+      "Yes, cancel it."
+     ]
+    }
+   },
+   {
+    "item": "C03",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 5.767,
+      "answer_audio": 5.767,
+      "endpoint_wait": 0.679,
+      "asr": 0.1808,
+      "llm": 3.746,
+      "tools": 0.002,
+      "tts": 1.159,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 2.463,
+      "answer_audio": 2.463,
+      "endpoint_wait": 0.571,
+      "asr": 0.1501,
+      "llm": 1.035,
+      "tools": 0,
+      "tts": 0.707,
+      "n_llm_calls_before_audio": 1
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "帮我取消明天的周会。",
+      "算了，先不取消了。"
+     ]
+    }
+   },
+   {
+    "item": "C04",
+    "cat": "task",
+    "lang": "mix",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 5.4,
+      "answer_audio": 5.4,
+      "endpoint_wait": 0.567,
+      "asr": 0.197,
+      "llm": 3.461,
+      "tools": 0.001,
+      "tts": 1.173,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 3.514,
+      "answer_audio": 3.514,
+      "endpoint_wait": 0.552,
+      "asr": 0.105,
+      "llm": 1.669,
+      "tools": 0.001,
+      "tts": 1.187,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "把明天下午的design review取消掉。",
+      "对，取消。"
+     ]
+    }
+   }
+  ],
+  "vad-think": [
+   {
+    "item": "C01",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.861,
+      "answer_audio": 4.861,
+      "endpoint_wait": 0.679,
+      "asr": 0.197,
+      "llm": 2.794,
+      "tools": 0.004,
+      "tts": 1.187,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 3.097,
+      "answer_audio": 3.097,
+      "endpoint_wait": 0.551,
+      "asr": 0.1068,
+      "llm": 1.12,
+      "tools": 0,
+      "tts": 1.319,
+      "n_llm_calls_before_audio": 1
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "把明天的设计评审取消掉。",
+      "对，取消吧。"
+     ]
+    }
+   },
+   {
+    "item": "C02",
+    "cat": "task",
+    "lang": "en",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 5.094,
+      "answer_audio": 5.094,
+      "endpoint_wait": 0.552,
+      "asr": 0.1663,
+      "llm": 2.619,
+      "tools": 0.003,
+      "tts": 1.754,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 3.326,
+      "answer_audio": 3.326,
+      "endpoint_wait": 0.681,
+      "asr": 0.1122,
+      "llm": 1.129,
+      "tools": 0,
+      "tts": 1.404,
+      "n_llm_calls_before_audio": 1
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "Please cancel the design review for tomorrow.",
+      "Yes, cancel it."
+     ]
+    }
+   },
+   {
+    "item": "C03",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": false
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": false,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 6.024,
+      "answer_audio": 6.024,
+      "endpoint_wait": 0.679,
+      "asr": 0.1808,
+      "llm": 4.408,
+      "tools": 0.003,
+      "tts": 0.753,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 5.177,
+      "answer_audio": 5.177,
+      "endpoint_wait": 0.571,
+      "asr": 0.1501,
+      "llm": 3.295,
+      "tools": 0.002,
+      "tts": 1.159,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "帮我取消明天的周会。",
+      "算了，先不取消了。"
+     ]
+    }
+   },
+   {
+    "item": "C04",
+    "cat": "task",
+    "lang": "mix",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 6.718,
+      "answer_audio": 6.718,
+      "endpoint_wait": 0.567,
+      "asr": 0.197,
+      "llm": 4.765,
+      "tools": 0.003,
+      "tts": 1.187,
+      "n_llm_calls_before_audio": 3
+     },
+     {
+      "role": "answer",
+      "first_audio": 3.546,
+      "answer_audio": 3.546,
+      "endpoint_wait": 0.552,
+      "asr": 0.1031,
+      "llm": 1.489,
+      "tools": 0,
+      "tts": 1.402,
+      "n_llm_calls_before_audio": 1
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "把明天下午的design review取消掉。",
+      "对取消。"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,3984 @@
+{
+ "summary": {
+  "oracle": {
+   "n": 14,
+   "task_pass": 14,
+   "interaction_pass": "0/0",
+   "strict_pass": 14,
+   "harness_errors": 0,
+   "latency_first_audio_median": null,
+   "latency_first_audio_p90": null,
+   "stop_latency_median": null,
+   "stops_measured": 0,
+   "reasoning_said_aloud": 3,
+   "strict_by_cat": {
+    "task": "14/14"
+   }
+  },
+  "vad-think-combo": {
+   "n": 14,
+   "task_pass": 12,
+   "interaction_pass": "14/14",
+   "strict_pass": 12,
+   "harness_errors": 0,
+   "latency_first_audio_median": 3.971,
+   "latency_first_audio_p90": 4.895,
+   "stop_latency_median": null,
+   "stops_measured": 0,
+   "reasoning_said_aloud": 0,
+   "strict_by_cat": {
+    "task": "12/14"
+   }
+  },
+  "vad-think": {
+   "n": 14,
+   "task_pass": 13,
+   "interaction_pass": "14/14",
+   "strict_pass": 13,
+   "harness_errors": 0,
+   "latency_first_audio_median": 4.017,
+   "latency_first_audio_p90": 5.297,
+   "stop_latency_median": null,
+   "stops_measured": 0,
+   "reasoning_said_aloud": 0,
+   "strict_by_cat": {
+    "task": "13/14"
+   }
+  }
+ },
+ "items": {
+  "oracle": [
+   {
+    "item": "D01",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction_pass": null
+   },
+   {
+    "item": "D02",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction_pass": null
+   },
+   {
+    "item": "D03",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "15:00",
+       60,
+       [
+        "李娜"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "15:00",
+       60,
+       [
+        "李娜"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction_pass": null
+   },
+   {
+    "item": "D04",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "16:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "16:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction_pass": null
+   },
+   {
+    "item": "D05",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction_pass": null
+   },
+   {
+    "item": "D06",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [
+      [
+       "2026-11-17",
+       "08:30"
+      ]
+     ],
+     "rem_want": [
+      [
+       "2026-11-17",
+       "08:30"
+      ]
+     ]
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction_pass": null
+   },
+   {
+    "item": "D07",
+    "cat": "task",
+    "lang": "en",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": true,
+    "interaction_pass": null
+   },
+   {
+    "item": "D08",
+    "cat": "task",
+    "lang": "en",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "15:00",
+       30,
+       [
+        "emma smith"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "15:00",
+       30,
+       [
+        "emma smith"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": true,
+    "interaction_pass": null
+   },
+   {
+    "item": "D09",
+    "cat": "task",
+    "lang": "mix",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "11:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "11:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction_pass": null
+   },
+   {
+    "item": "D10",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": true,
+    "interaction_pass": null
+   },
+   {
+    "item": "V01",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction_pass": null
+   },
+   {
+    "item": "V02",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction_pass": null
+   },
+   {
+    "item": "V03",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "11:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "11:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction_pass": null
+   },
+   {
+    "item": "V04",
+    "cat": "task",
+    "lang": "en",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction_pass": null
+   }
+  ],
+  "vad-think-combo": [
+   {
+    "item": "D01",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.179,
+      "answer_audio": 3.179,
+      "endpoint_wait": 0.619,
+      "asr": 0.2367,
+      "llm": 1.741,
+      "tools": 0.008,
+      "tts": 0.575,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "帮我渣查查一下明天上海的天气。"
+     ]
+    }
+   },
+   {
+    "item": "D02",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.843,
+      "answer_audio": 3.843,
+      "endpoint_wait": 0.578,
+      "asr": 0.3269,
+      "llm": 2.39,
+      "tools": 0.006,
+      "tts": 0.542,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": false,
+     "missing": [
+      "成都"
+     ],
+     "asr_texts": [
+      "呃，帮我能插一下明天城都冷不冷。"
+     ]
+    }
+   },
+   {
+    "item": "D03",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "15:00",
+       60,
+       [
+        "李娜"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "15:00",
+       60,
+       [
+        "李娜"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.898,
+      "answer_audio": 4.898,
+      "endpoint_wait": 0.534,
+      "asr": 0.4118,
+      "llm": 2.483,
+      "tools": 0.008,
+      "tts": 1.461,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "帮我预张维不对，约李娜明天下午3点开会一个小时。"
+     ]
+    }
+   },
+   {
+    "item": "D04",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": false
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "16:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": false,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.888,
+      "answer_audio": 4.888,
+      "endpoint_wait": 0.517,
+      "asr": 0.4334,
+      "llm": 3.457,
+      "tools": 0.006,
+      "tts": 0.474,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "明天的那个已算了，把明天下午两点的会改到4点。"
+     ]
+    }
+   },
+   {
+    "item": "D05",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.36,
+      "answer_audio": 3.36,
+      "endpoint_wait": 0.525,
+      "asr": 0.1952,
+      "llm": 2.051,
+      "tools": 0.005,
+      "tts": 0.584,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "后天后天杭州会下雨吗？"
+     ]
+    }
+   },
+   {
+    "item": "D06",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": false
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": [
+      [
+       "2026-11-17",
+       "08:30"
+      ]
+     ]
+    },
+    "task_pass": false,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.0,
+      "answer_audio": 4.0,
+      "endpoint_wait": 0.551,
+      "asr": 0.3215,
+      "llm": 1.593,
+      "tools": 0,
+      "tts": 1.534,
+      "n_llm_calls_before_audio": 1
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "提醒我明天早上8点鄂8点半给王强打电话。"
+     ]
+    }
+   },
+   {
+    "item": "D07",
+    "cat": "task",
+    "lang": "en",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.943,
+      "answer_audio": 3.943,
+      "endpoint_wait": 0.534,
+      "asr": 0.2078,
+      "llm": 1.969,
+      "tools": 0.004,
+      "tts": 1.228,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "U, what is the a weather in Singapore tomorrow?"
+     ]
+    }
+   },
+   {
+    "item": "D08",
+    "cat": "task",
+    "lang": "en",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "15:00",
+       30,
+       [
+        "emma smith"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "15:00",
+       30,
+       [
+        "emma smith"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.812,
+      "answer_audio": 4.812,
+      "endpoint_wait": 0.571,
+      "asr": 0.3685,
+      "llm": 2.425,
+      "tools": 0.004,
+      "tts": 1.443,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "Schedule a meeting with Emma Smith tomorrow at2, no at three in the afternoon for half an hour."
+     ]
+    }
+   },
+   {
+    "item": "D09",
+    "cat": "task",
+    "lang": "mix",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "11:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "11:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 5.177,
+      "answer_audio": 5.177,
+      "endpoint_wait": 0.58,
+      "asr": 0.2999,
+      "llm": 3.153,
+      "tools": 0.007,
+      "tts": 1.137,
+      "n_llm_calls_before_audio": 3
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "那个就是明天的weekly密人，推迟一个小时。"
+     ]
+    }
+   },
+   {
+    "item": "D10",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.082,
+      "answer_audio": 4.082,
+      "endpoint_wait": 0.564,
+      "asr": 0.3179,
+      "llm": 2.89,
+      "tools": 0.006,
+      "tts": 0.305,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "帮我看一下云呃后天有什么安排。"
+     ]
+    }
+   },
+   {
+    "item": "V01",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.342,
+      "answer_audio": 3.342,
+      "endpoint_wait": 0.582,
+      "asr": 0.2078,
+      "llm": 1.972,
+      "tools": 0.005,
+      "tts": 0.575,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "帮我查一下明天上海的天气。"
+     ]
+    }
+   },
+   {
+    "item": "V02",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.062,
+      "answer_audio": 3.062,
+      "endpoint_wait": 0.556,
+      "asr": 0.1988,
+      "llm": 1.718,
+      "tools": 0.005,
+      "tts": 0.584,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "后天杭州会下雨吗？"
+     ]
+    }
+   },
+   {
+    "item": "V03",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "11:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "11:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.832,
+      "answer_audio": 4.832,
+      "endpoint_wait": 0.576,
+      "asr": 0.2114,
+      "llm": 2.77,
+      "tools": 0.01,
+      "tts": 1.264,
+      "n_llm_calls_before_audio": 3
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "明天的周会推迟一个小时。"
+     ]
+    }
+   },
+   {
+    "item": "V04",
+    "cat": "task",
+    "lang": "en",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.67,
+      "answer_audio": 3.67,
+      "endpoint_wait": 0.54,
+      "asr": 0.1645,
+      "llm": 1.802,
+      "tools": 0.004,
+      "tts": 1.159,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "What is the weather in Singapore tomorrow?"
+     ]
+    }
+   }
+  ],
+  "vad-think": [
+   {
+    "item": "D01",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.515,
+      "answer_audio": 3.515,
+      "endpoint_wait": 0.683,
+      "asr": 0.2403,
+      "llm": 2.013,
+      "tools": 0.005,
+      "tts": 0.575,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "帮我渣查查一下明天上海的天气。"
+     ]
+    }
+   },
+   {
+    "item": "D02",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.947,
+      "answer_audio": 3.947,
+      "endpoint_wait": 0.674,
+      "asr": 0.3342,
+      "llm": 2.393,
+      "tools": 0.004,
+      "tts": 0.542,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": false,
+     "missing": [
+      "成都"
+     ],
+     "asr_texts": [
+      "呃，帮我能插一下明天城都冷不冷。"
+     ]
+    }
+   },
+   {
+    "item": "D03",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "15:00",
+       60,
+       [
+        "李娜"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "15:00",
+       60,
+       [
+        "李娜"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.273,
+      "answer_audio": 4.273,
+      "endpoint_wait": 0.534,
+      "asr": 0.4262,
+      "llm": 2.747,
+      "tools": 0.005,
+      "tts": 0.561,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "帮我预张维不对，约李娜明天下午3点开会一个小时。"
+     ]
+    }
+   },
+   {
+    "item": "D04",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "16:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "16:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 6.759,
+      "answer_audio": 6.759,
+      "endpoint_wait": 0.549,
+      "asr": 0.4316,
+      "llm": 4.367,
+      "tools": 0.009,
+      "tts": 1.402,
+      "n_llm_calls_before_audio": 3
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "明天的那个已算了，把明天下午两点的会改到4点。"
+     ]
+    }
+   },
+   {
+    "item": "D05",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.087,
+      "answer_audio": 4.087,
+      "endpoint_wait": 0.557,
+      "asr": 0.197,
+      "llm": 2.746,
+      "tools": 0.004,
+      "tts": 0.584,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "后天后天杭州会下雨吗？"
+     ]
+    }
+   },
+   {
+    "item": "D06",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": false
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": [
+      [
+       "2026-11-17",
+       "08:30"
+      ]
+     ]
+    },
+    "task_pass": false,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.604,
+      "answer_audio": 3.604,
+      "endpoint_wait": 0.647,
+      "asr": 0.3269,
+      "llm": 1.763,
+      "tools": 0,
+      "tts": 0.867,
+      "n_llm_calls_before_audio": 1
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "提醒我明天早上8点鄂8点半给王强打电话。"
+     ]
+    }
+   },
+   {
+    "item": "D07",
+    "cat": "task",
+    "lang": "en",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.758,
+      "answer_audio": 3.758,
+      "endpoint_wait": 0.566,
+      "asr": 0.2114,
+      "llm": 2.38,
+      "tools": 0.003,
+      "tts": 0.597,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "U, what is the a weather in Singapore tomorrow?"
+     ]
+    }
+   },
+   {
+    "item": "D08",
+    "cat": "task",
+    "lang": "en",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "15:00",
+       30,
+       [
+        "emma smith"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "15:00",
+       30,
+       [
+        "emma smith"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.893,
+      "answer_audio": 4.893,
+      "endpoint_wait": 0.571,
+      "asr": 0.3739,
+      "llm": 2.503,
+      "tools": 0.003,
+      "tts": 1.443,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "Schedule a meeting with Emma Smith tomorrow at2, no at three in the afternoon for half an hour."
+     ]
+    }
+   },
+   {
+    "item": "D09",
+    "cat": "task",
+    "lang": "mix",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "11:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "11:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 5.037,
+      "answer_audio": 5.037,
+      "endpoint_wait": 0.548,
+      "asr": 0.2981,
+      "llm": 3.051,
+      "tools": 0.008,
+      "tts": 1.132,
+      "n_llm_calls_before_audio": 3
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "那个就是明天的weekly密人，推迟一个小时。"
+     ]
+    }
+   },
+   {
+    "item": "D10",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 5.409,
+      "answer_audio": 5.409,
+      "endpoint_wait": 0.692,
+      "asr": 0.3251,
+      "llm": 3.366,
+      "tools": 0.004,
+      "tts": 1.022,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "帮我看一下云呃后天有什么安排。"
+     ]
+    }
+   },
+   {
+    "item": "V01",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.465,
+      "answer_audio": 3.465,
+      "endpoint_wait": 0.678,
+      "asr": 0.2241,
+      "llm": 1.982,
+      "tools": 0.006,
+      "tts": 0.575,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "帮我查一下明天上海的天气。"
+     ]
+    }
+   },
+   {
+    "item": "V02",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.088,
+      "answer_audio": 3.088,
+      "endpoint_wait": 0.556,
+      "asr": 0.2006,
+      "llm": 1.744,
+      "tools": 0.003,
+      "tts": 0.584,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "后天杭州会下雨吗？"
+     ]
+    }
+   },
+   {
+    "item": "V03",
+    "cat": "task",
+    "lang": "zh",
+    "noise": "none",
+    "checks": {
+     "state": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "11:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "11:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 4.664,
+      "answer_audio": 4.664,
+      "endpoint_wait": 0.576,
+      "asr": 0.2114,
+      "llm": 2.792,
+      "tools": 0.007,
+      "tts": 1.077,
+      "n_llm_calls_before_audio": 3
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "明天的周会推迟一个小时。"
+     ]
+    }
+   },
+   {
+    "item": "V04",
+    "cat": "task",
+    "lang": "en",
+    "noise": "none",
+    "checks": {
+     "state": true,
+     "no_mutation": true,
+     "weather_call": true,
+     "said": true
+    },
+    "notes": [],
+    "state_detail": {
+     "meetings": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "want": [
+      [
+       "2026-11-17",
+       "10:00",
+       60,
+       [
+        "张伟",
+        "李娜",
+        "王强"
+       ]
+      ],
+      [
+       "2026-11-17",
+       "14:00",
+       60,
+       [
+        "刘洋",
+        "陈静"
+       ]
+      ],
+      [
+       "2026-11-18",
+       "16:00",
+       30,
+       [
+        "tom lee"
+       ]
+      ]
+     ],
+     "reminders": [],
+     "rem_want": []
+    },
+    "task_pass": true,
+    "leak": false,
+    "interaction": {},
+    "interaction_pass": true,
+    "latency": [
+     {
+      "role": "request",
+      "first_audio": 3.67,
+      "answer_audio": 3.67,
+      "endpoint_wait": 0.54,
+      "asr": 0.1645,
+      "llm": 1.803,
+      "tools": 0.004,
+      "tts": 1.159,
+      "n_llm_calls_before_audio": 2
+     }
+    ],
+    "slots": {
+     "all": true,
+     "missing": [],
+     "asr_texts": [
+      "What is the weather in Singapore tomorrow?"
+     ]
+    }
+   }
+  ]
+ }
+}

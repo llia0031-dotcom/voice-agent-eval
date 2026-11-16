@@ -1,0 +1,80 @@
+{
+ "sample_rate": 16000,
+ "target_rms": 0.05,
+ "items": {
+  "C01": {
+   "speaker": 3,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "C01/seg0.wav",
+     "dur": 2.521,
+     "sha256": "273512001aa0"
+    },
+    {
+     "file": "C01/seg1.wav",
+     "dur": 1.057,
+     "sha256": "3da001bd92b7"
+    }
+   ]
+  },
+  "C02": {
+   "speaker": 0,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "C02/seg0.wav",
+     "dur": 2.136,
+     "sha256": "e43a0142c839"
+    },
+    {
+     "file": "C02/seg1.wav",
+     "dur": 1.023,
+     "sha256": "e1faa62dd76e"
+    }
+   ]
+  },
+  "C03": {
+   "speaker": 18,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "C03/seg0.wav",
+     "dur": 2.233,
+     "sha256": "cf5ee290966d"
+    },
+    {
+     "file": "C03/seg1.wav",
+     "dur": 1.837,
+     "sha256": "e4c54aeaf39d"
+    }
+   ]
+  },
+  "C04": {
+   "speaker": 47,
+   "noise": "none",
+   "segments": [
+    {
+     "file": "C04/seg0.wav",
+     "dur": 2.633,
+     "sha256": "8cf20ba07127"
+    },
+    {
+     "file": "C04/seg1.wav",
+     "dur": 1.024,
+     "sha256": "9cd9c3cbada8"
+    }
+   ]
+  }
+ },
+ "noise": {
+  "pink": {
+   "file": "noise_pink.wav",
+   "sha256": "03ba833b86ba"
+  },
+  "babble": {
+   "file": "noise_babble.wav",
+   "sha256": "7e20ff5e728b"
+  }
+ }
+}
