@@ -2,6 +2,8 @@
 
 How does a cascaded voice agent (voice activity detection → speech recognition → an LLM with tools → speech synthesis) behave when a person pauses mid-sentence, interrupts it, says "嗯" while it talks, or talks with other people in the background, and does it do the task right? This repository measures that on 42 scripted Chinese, English and code-switched conversations, then tests fixes one at a time against the same items.
 
+**Live demo:** [jason-d-e.github.io/voice-agent-eval](https://jason-d-e.github.io/voice-agent-eval/) (Chinese; [English](https://jason-d-e.github.io/voice-agent-eval/en.html)). Listen to the recordings, see each conversation's timeline, and compare the first round with the fixes. All user voices are synthetic.
+
 ## What it found
 
 From [`eval/EVALUATION.md`](eval/EVALUATION.md), two runs of every arm:
