@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>关于：听测</title>
+<meta name="description" content="听测用了哪些模型、声音怎么来的、时间怎么算、改了哪些地方、有哪些局限。">
+<meta name="theme-color" content="#232220">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="en" href="about-en.html">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="kit.css">
+<link rel="stylesheet" href="page.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="mast k-night">
+  <div class="k-wrap mast__in">
+    <a class="wordmark" href="./">听测</a>
+    <nav aria-label="页面导航">
+      <ul class="nav">
+        <li><a href="./#moments">四个时刻</a></li>
+        <li><a href="./#changes">改了以后</a></li>
+        <li><a href="./#misses">失手</a></li>
+        <li><a href="about.html" aria-current="page">关于</a></li>
+        <li><a href="about-en.html" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" class="doc k-sec">
+  <div class="k-wrap">
+    <div class="doc__in">
+      <h1>关于</h1>
+      <p><a class="k-btn k-btn--ghost" href="./">回到首页</a></p>
+
+      <p>一次对语音助手“接话”能力的评测：用户停顿时它会不会抢话，被插话时多久停下，听到“嗯”“好的”会不会误停，背景有人说话时还能不能听准，订会议、查天气这类任务有没有做对。先测第一轮，再一次改一处，用同样的题重测。</p>
+
+      <h2>助手是怎么搭的</h2>
+      <ul>
+        <li>听：Silero VAD 判断有没有人在说话，SenseVoice-Small 把语音转成文字，都在一台笔记本的 CPU 上跑。</li>
+        <li>想：claude-haiku-5-5，通过 MCP 调用本机的模拟工具（天气、日程、提醒，数据都是编的）。</li>
+        <li>说：MeloTTS 合成助手的声音，第一段话一出来就开始说。</li>
+        <li>第一轮三种接话方式：安静 0.55 秒就算说完；用 Pipecat Smart Turn v3.2 判断说完没有；安静 0.55 秒、让模型先思考再说。</li>
+      </ul>
+
+      <h2>用户的声音</h2>
+      <p>页面上所有用户的声音都是合成的，没有真人录音：Kokoro v1.1 在本机合成，按剧本加上停顿、插话、附和和背景人声。每段对话的正确结果在写题时就定好，打分看模拟工具里最后的数据对不对、该说的话有没有真的说出来。</p>
+
+      <h2>时间是怎么算的</h2>
+      <p>评测按 32 毫秒一帧推进一条虚拟时间线。轮到助手时，识别、每次模型调用、每次工具调用、每段语音合成都真的运行；模型和工具的耗时按实际测量，识别和合成的耗时按事先测好的速度换算，结果不受电脑当时忙不忙的影响。页面上的录音就是这条时间线存下的声音，用户和助手混在一起。</p>
+
+      <h2>后来改了什么</h2>
+      <ul>
+        <li>只听第一句话的说话人（FireRedChat pVAD），背景人声不再占住话轮。</li>
+        <li>第一段语音切短，“好的，”可以先说出来。</li>
+        <li>取消会议前先口头确认一句。</li>
+        <li>听到声音先暂停，判断是真插话才停下，否则从停下的地方接着说（照 LiveKit 的做法）。</li>
+        <li>在这四项上再加：确认问得短，用户先开口就不拆成两轮，边生成边合成，时长说成分钟。</li>
+      </ul>
+      <p>每一项跑之前都写下了预测，没成立的也写在报告里。</p>
+
+      <h2>局限</h2>
+      <ul>
+        <li>声音都是合成的；带口误的说法也只有合成的，没有真人录音。中文声音念英文名字时，识别更容易出错。</li>
+        <li>时间线是模拟的：假设回声消除完美，播放器一检测到插话就立刻停。</li>
+        <li>一共 42 段对话，每组跑两遍，相差一两段算正常波动。</li>
+        <li>题目、答案和助手的提示词出自同一作者。</li>
+        <li>还没有和端到端的实时语音模型比较。</li>
+      </ul>
+
+      <h2>代码、报告和许可</h2>
+      <ul>
+        <li>代码、题目、预注册、每次运行的记录和报告：<a href="https://github.com/Jason-d-e/voice-agent-eval">github.com/Jason-d-e/voice-agent-eval</a>（MIT）。完整报告是英文的：<a href="report.html" hreflang="en">在这里读</a>。</li>
+        <li>指标的定义参考了 Full-Duplex-Bench（停止时延、回应时延）、FLEXI 和 FD-Bench。</li>
+        <li>用到的模型各有自己的许可：SenseVoice-Small（FunASR 模型许可，注明出处）、Silero VAD（MIT）、Pipecat Smart Turn v3.2（BSD-2-Clause）、Kokoro v1.1（Apache-2.0）、MeloTTS（MIT）、FireRedChat pVAD（Apache-2.0），用 sherpa-onnx（Apache-2.0）在本机运行。</li>
+      </ul>
+    </div>
+  </div>
+</main>
+<footer class="foot k-night">
+  <div class="k-wrap">
+    <ul class="foot__links">
+      <li><a href="./">回到首页</a></li>
+      <li><a href="report.html" hreflang="en">完整报告（英文）</a></li>
+      <li><a href="https://github.com/Jason-d-e/voice-agent-eval">GitHub</a></li>
+    </ul>
+  </div>
+</footer>
+<script type="module" src="kit.js"></script>
+</body>
+</html>

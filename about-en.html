@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About · Listen Test</title>
+<meta name="description" content="Which models Listen Test uses, where the voices come from, how time is counted, what was changed, and the limits.">
+<meta name="theme-color" content="#232220">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="zh-CN" href="about.html">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="kit.css">
+<link rel="stylesheet" href="page.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="mast k-night">
+  <div class="k-wrap mast__in">
+    <a class="wordmark" href="en.html">Listen Test</a>
+    <nav aria-label="Page">
+      <ul class="nav">
+        <li><a href="en.html#moments">Four moments</a></li>
+        <li><a href="en.html#changes">After the fixes</a></li>
+        <li><a href="en.html#misses">Failures</a></li>
+        <li><a href="about-en.html" aria-current="page">About</a></li>
+        <li><a href="about.html" lang="zh-CN" hreflang="zh-CN">中文</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" class="doc k-sec">
+  <div class="k-wrap">
+    <div class="doc__in">
+      <h1>About</h1>
+      <p><a class="k-btn k-btn--ghost" href="en.html">Back to the recordings</a></p>
+
+      <p>An evaluation of how a voice agent takes turns: does it talk over a user who pauses, how quickly does it stop when interrupted, does it stop for “mm-hm” or “okay”, can it still hear the user over background talk, and does it get tasks such as booking a meeting or checking the weather right. A first round is measured, then one change at a time is retested on the same items.</p>
+
+      <h2>How the agent is built</h2>
+      <ul>
+        <li>Listening: Silero VAD detects speech and SenseVoice-Small transcribes it, both on a laptop CPU.</li>
+        <li>Thinking: claude-haiku-5-5, calling local mock tools over MCP (weather, calendar, reminders; all data invented).</li>
+        <li>Speaking: MeloTTS synthesizes the agent’s voice and starts as soon as the first chunk of text is ready.</li>
+        <li>Three first-round ways to take the turn: after 0.55 s of silence; when Pipecat Smart Turn v3.2 judges the turn finished; after 0.55 s of silence with the model thinking first.</li>
+      </ul>
+
+      <h2>The users’ voices</h2>
+      <p>Every user voice on these pages is synthetic; there are no human recordings. Kokoro v1.1 synthesizes them on the same computer, and a script adds the pauses, interruptions, backchannels and background talk. The right outcome of each conversation was fixed when it was written; scoring checks the mock tools’ final data and whether what had to be said was actually said.</p>
+
+      <h2>How time is counted</h2>
+      <p>The evaluation advances a virtual timeline in 32 ms frames. When the agent takes its turn, recognition, every model call, every tool call and every chunk of speech synthesis really run. Model and tool times are measured; recognition and synthesis times come from a calibration made beforehand, so the results do not depend on how busy the computer was. The recordings on these pages are the sound of that timeline, user and agent mixed.</p>
+
+      <h2>What was changed later</h2>
+      <ul>
+        <li>Listen only to the speaker of the first utterance (FireRedChat pVAD), so background talk no longer holds the turn.</li>
+        <li>A shorter first speech chunk, so 「好的，」 (okay,) can be said at once.</li>
+        <li>Confirm aloud before cancelling a meeting.</li>
+        <li>Pause on any sound, stop only for a real interruption, otherwise go on from where it paused (as LiveKit does).</li>
+        <li>On top of these four: a shorter confirmation question, keep the turn whole when the user spoke first, synthesize each chunk as it streams in, say durations in minutes.</li>
+      </ul>
+      <p>Every change had its expectations written down before it ran; those that did not hold are in the report too.</p>
+
+      <h2>Limits</h2>
+      <ul>
+        <li>All voices are synthetic, disfluent speech included; there are no human recordings. Chinese voices reading English names make recognition errors more likely.</li>
+        <li>The timeline is simulated: echo cancellation is assumed perfect, and playback stops the moment an interruption is detected.</li>
+        <li>42 conversations, two runs per set-up; a difference of one or two items is within normal variation.</li>
+        <li>The items, the answers and the agent’s prompt come from the same author.</li>
+        <li>No end-to-end realtime speech model has been compared yet.</li>
+      </ul>
+
+      <h2>Code, report and licences</h2>
+      <ul>
+        <li>Code, items, preregistration, every run record and the report: <a href="https://github.com/Jason-d-e/voice-agent-eval">github.com/Jason-d-e/voice-agent-eval</a> (MIT). The <a href="report.html">full report</a> is on this site too.</li>
+        <li>The measures follow the definitions of Full-Duplex-Bench (stop latency, response latency), FLEXI and FD-Bench.</li>
+        <li>The models keep their own licences: SenseVoice-Small (FunASR model licence, with attribution), Silero VAD (MIT), Pipecat Smart Turn v3.2 (BSD-2-Clause), Kokoro v1.1 (Apache-2.0), MeloTTS (MIT), FireRedChat pVAD (Apache-2.0), run locally with sherpa-onnx (Apache-2.0).</li>
+      </ul>
+    </div>
+  </div>
+</main>
+<footer class="foot k-night">
+  <div class="k-wrap">
+    <ul class="foot__links">
+      <li><a href="en.html">Back to the recordings</a></li>
+      <li><a href="report.html">Full report</a></li>
+      <li><a href="https://github.com/Jason-d-e/voice-agent-eval">GitHub</a></li>
+    </ul>
+  </div>
+</footer>
+<script type="module" src="kit.js"></script>
+</body>
+</html>
