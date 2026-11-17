@@ -719,4 +719,4 @@ From the project root with the project's Python environment: `python -X utf8 eva
 
 This evaluation is the interaction case in a small portfolio built around one idea: an AI system should show its evidence. The other cases cover answering from documents, judging and generating. Two things are shared across them:
 - **The method.** Items, answers and scoring rules are written before anything runs (here, `PREREGISTRATION.md` and its addenda). Each change is retested on the same items, and every change in a score is explained, including the expectations that did not hold.
-- **One checking component, [evidence-check](https://github.com/Jason-d-e/evidence-check)** (MIT). It checks that what an AI states is backed by a source, quote for quote and number for number. Here it checks the agent's spoken confirmations against the record of its tool calls (section 6.20).
+- **One checking component, [evidence-check](https://github.com/llia0031-dotcom/evidence-check)** (MIT). It checks that what an AI states is backed by a source, quote for quote and number for number. Here it checks the agent's spoken confirmations against the record of its tool calls (section 6.20).

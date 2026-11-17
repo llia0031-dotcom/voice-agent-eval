@@ -2,7 +2,7 @@
 
 How does a cascaded voice agent (voice activity detection → speech recognition → an LLM with tools → speech synthesis) behave when a person pauses mid-sentence, interrupts it, says "嗯" while it talks, or talks with other people in the background, and does it do the task right? This repository measures that on 42 scripted Chinese, English and code-switched conversations, then tests fixes one at a time against the same items.
 
-**Live demo:** [jason-d-e.github.io/voice-agent-eval](https://jason-d-e.github.io/voice-agent-eval/) (Chinese; [English](https://jason-d-e.github.io/voice-agent-eval/en.html)). Listen to the recordings, see each conversation's timeline, and compare the first round with the fixes. All user voices are synthetic.
+**Live demo:** [llia0031-dotcom.github.io/voice-agent-eval](https://llia0031-dotcom.github.io/voice-agent-eval/) (Chinese; [English](https://llia0031-dotcom.github.io/voice-agent-eval/en.html)). Listen to the recordings, see each conversation's timeline, and compare the first round with the fixes. All user voices are synthetic.
 
 ## What it found
 
@@ -28,7 +28,7 @@ From [`eval/EVALUATION.md`](eval/EVALUATION.md), two runs of every arm:
 This project is the **interaction** case in a small portfolio built around one idea: an AI system should show its evidence. The other cases cover answering from documents, judging and generating. They share two things:
 
 - **The method.** A plan, items and answers are written before anything runs, each change is retested against the same items, and changes in a score are explained.
-- **One checking component, [evidence-check](https://github.com/Jason-d-e/evidence-check)** (MIT). Here it checks the agent's spoken confirmations, such as "已设置提醒：明天上午9点", against the record of the tool calls behind them ([`eval/confirm_consistency.py`](eval/confirm_consistency.py), report section 6.20).
+- **One checking component, [evidence-check](https://github.com/llia0031-dotcom/evidence-check)** (MIT). Here it checks the agent's spoken confirmations, such as "已设置提醒：明天上午9点", against the record of the tool calls behind them ([`eval/confirm_consistency.py`](eval/confirm_consistency.py), report section 6.20).
 
 ## Reproduce
 
